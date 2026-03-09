@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "Chennai Super Kings||Deccan Chargers": {
     "team1": "Chennai Super Kings",
@@ -580,4 +581,588 @@
     "team1_wins": 11,
     "team2_wins": 13
   }
+=======
+{
+  "Chennai Super Kings||Deccan Chargers": {
+    "team1": "Chennai Super Kings",
+    "team2": "Deccan Chargers",
+    "matches": 10,
+    "team1_wins": 6,
+    "team2_wins": 4
+  },
+  "Chennai Super Kings||Delhi Capitals": {
+    "team1": "Chennai Super Kings",
+    "team2": "Delhi Capitals",
+    "matches": 31,
+    "team1_wins": 19,
+    "team2_wins": 12
+  },
+  "Chennai Super Kings||Gujarat Titans": {
+    "team1": "Chennai Super Kings",
+    "team2": "Gujarat Titans",
+    "matches": 8,
+    "team1_wins": 4,
+    "team2_wins": 4
+  },
+  "Chennai Super Kings||Kochi Tuskers Kerala": {
+    "team1": "Chennai Super Kings",
+    "team2": "Kochi Tuskers Kerala",
+    "matches": 2,
+    "team1_wins": 1,
+    "team2_wins": 1
+  },
+  "Chennai Super Kings||Kolkata Knight Riders": {
+    "team1": "Chennai Super Kings",
+    "team2": "Kolkata Knight Riders",
+    "matches": 31,
+    "team1_wins": 20,
+    "team2_wins": 11
+  },
+  "Chennai Super Kings||Lucknow Super Giants": {
+    "team1": "Chennai Super Kings",
+    "team2": "Lucknow Super Giants",
+    "matches": 6,
+    "team1_wins": 2,
+    "team2_wins": 3
+  },
+  "Chennai Super Kings||Mumbai Indians": {
+    "team1": "Chennai Super Kings",
+    "team2": "Mumbai Indians",
+    "matches": 39,
+    "team1_wins": 18,
+    "team2_wins": 21
+  },
+  "Chennai Super Kings||Pune Warriors": {
+    "team1": "Chennai Super Kings",
+    "team2": "Pune Warriors",
+    "matches": 6,
+    "team1_wins": 4,
+    "team2_wins": 2
+  },
+  "Chennai Super Kings||Punjab Kings": {
+    "team1": "Chennai Super Kings",
+    "team2": "Punjab Kings",
+    "matches": 32,
+    "team1_wins": 16,
+    "team2_wins": 15
+  },
+  "Chennai Super Kings||Rajasthan Royals": {
+    "team1": "Chennai Super Kings",
+    "team2": "Rajasthan Royals",
+    "matches": 31,
+    "team1_wins": 16,
+    "team2_wins": 15
+  },
+  "Chennai Super Kings||Royal Challengers Bengaluru": {
+    "team1": "Chennai Super Kings",
+    "team2": "Royal Challengers Bengaluru",
+    "matches": 34,
+    "team1_wins": 21,
+    "team2_wins": 13
+  },
+  "Chennai Super Kings||Sunrisers Hyderabad": {
+    "team1": "Chennai Super Kings",
+    "team2": "Sunrisers Hyderabad",
+    "matches": 22,
+    "team1_wins": 15,
+    "team2_wins": 7
+  },
+  "Deccan Chargers||Delhi Capitals": {
+    "team1": "Deccan Chargers",
+    "team2": "Delhi Capitals",
+    "matches": 11,
+    "team1_wins": 4,
+    "team2_wins": 7
+  },
+  "Deccan Chargers||Kochi Tuskers Kerala": {
+    "team1": "Deccan Chargers",
+    "team2": "Kochi Tuskers Kerala",
+    "matches": 1,
+    "team1_wins": 1,
+    "team2_wins": 0
+  },
+  "Deccan Chargers||Kolkata Knight Riders": {
+    "team1": "Deccan Chargers",
+    "team2": "Kolkata Knight Riders",
+    "matches": 9,
+    "team1_wins": 2,
+    "team2_wins": 7
+  },
+  "Deccan Chargers||Mumbai Indians": {
+    "team1": "Deccan Chargers",
+    "team2": "Mumbai Indians",
+    "matches": 10,
+    "team1_wins": 4,
+    "team2_wins": 6
+  },
+  "Deccan Chargers||Pune Warriors": {
+    "team1": "Deccan Chargers",
+    "team2": "Pune Warriors",
+    "matches": 4,
+    "team1_wins": 3,
+    "team2_wins": 1
+  },
+  "Deccan Chargers||Punjab Kings": {
+    "team1": "Deccan Chargers",
+    "team2": "Punjab Kings",
+    "matches": 10,
+    "team1_wins": 3,
+    "team2_wins": 7
+  },
+  "Deccan Chargers||Rajasthan Royals": {
+    "team1": "Deccan Chargers",
+    "team2": "Rajasthan Royals",
+    "matches": 9,
+    "team1_wins": 2,
+    "team2_wins": 7
+  },
+  "Deccan Chargers||Royal Challengers Bengaluru": {
+    "team1": "Deccan Chargers",
+    "team2": "Royal Challengers Bengaluru",
+    "matches": 11,
+    "team1_wins": 6,
+    "team2_wins": 5
+  },
+  "Delhi Capitals||Gujarat Lions": {
+    "team1": "Delhi Capitals",
+    "team2": "Gujarat Lions",
+    "matches": 4,
+    "team1_wins": 3,
+    "team2_wins": 1
+  },
+  "Delhi Capitals||Gujarat Titans": {
+    "team1": "Delhi Capitals",
+    "team2": "Gujarat Titans",
+    "matches": 7,
+    "team1_wins": 3,
+    "team2_wins": 4
+  },
+  "Delhi Capitals||Kochi Tuskers Kerala": {
+    "team1": "Delhi Capitals",
+    "team2": "Kochi Tuskers Kerala",
+    "matches": 2,
+    "team1_wins": 1,
+    "team2_wins": 1
+  },
+  "Delhi Capitals||Kolkata Knight Riders": {
+    "team1": "Delhi Capitals",
+    "team2": "Kolkata Knight Riders",
+    "matches": 34,
+    "team1_wins": 14,
+    "team2_wins": 19
+  },
+  "Delhi Capitals||Lucknow Super Giants": {
+    "team1": "Delhi Capitals",
+    "team2": "Lucknow Super Giants",
+    "matches": 7,
+    "team1_wins": 4,
+    "team2_wins": 3
+  },
+  "Delhi Capitals||Mumbai Indians": {
+    "team1": "Delhi Capitals",
+    "team2": "Mumbai Indians",
+    "matches": 37,
+    "team1_wins": 16,
+    "team2_wins": 21
+  },
+  "Delhi Capitals||Pune Warriors": {
+    "team1": "Delhi Capitals",
+    "team2": "Pune Warriors",
+    "matches": 6,
+    "team1_wins": 3,
+    "team2_wins": 2
+  },
+  "Delhi Capitals||Punjab Kings": {
+    "team1": "Delhi Capitals",
+    "team2": "Punjab Kings",
+    "matches": 35,
+    "team1_wins": 16,
+    "team2_wins": 17
+  },
+  "Delhi Capitals||Rajasthan Royals": {
+    "team1": "Delhi Capitals",
+    "team2": "Rajasthan Royals",
+    "matches": 30,
+    "team1_wins": 14,
+    "team2_wins": 15
+  },
+  "Delhi Capitals||Rising Pune Supergiant": {
+    "team1": "Delhi Capitals",
+    "team2": "Rising Pune Supergiant",
+    "matches": 4,
+    "team1_wins": 2,
+    "team2_wins": 2
+  },
+  "Delhi Capitals||Royal Challengers Bengaluru": {
+    "team1": "Delhi Capitals",
+    "team2": "Royal Challengers Bengaluru",
+    "matches": 33,
+    "team1_wins": 12,
+    "team2_wins": 19
+  },
+  "Delhi Capitals||Sunrisers Hyderabad": {
+    "team1": "Delhi Capitals",
+    "team2": "Sunrisers Hyderabad",
+    "matches": 26,
+    "team1_wins": 11,
+    "team2_wins": 13
+  },
+  "Gujarat Lions||Kolkata Knight Riders": {
+    "team1": "Gujarat Lions",
+    "team2": "Kolkata Knight Riders",
+    "matches": 4,
+    "team1_wins": 3,
+    "team2_wins": 1
+  },
+  "Gujarat Lions||Mumbai Indians": {
+    "team1": "Gujarat Lions",
+    "team2": "Mumbai Indians",
+    "matches": 4,
+    "team1_wins": 2,
+    "team2_wins": 1
+  },
+  "Gujarat Lions||Punjab Kings": {
+    "team1": "Gujarat Lions",
+    "team2": "Punjab Kings",
+    "matches": 4,
+    "team1_wins": 2,
+    "team2_wins": 2
+  },
+  "Gujarat Lions||Rising Pune Supergiant": {
+    "team1": "Gujarat Lions",
+    "team2": "Rising Pune Supergiant",
+    "matches": 4,
+    "team1_wins": 3,
+    "team2_wins": 1
+  },
+  "Gujarat Lions||Royal Challengers Bengaluru": {
+    "team1": "Gujarat Lions",
+    "team2": "Royal Challengers Bengaluru",
+    "matches": 5,
+    "team1_wins": 2,
+    "team2_wins": 3
+  },
+  "Gujarat Lions||Sunrisers Hyderabad": {
+    "team1": "Gujarat Lions",
+    "team2": "Sunrisers Hyderabad",
+    "matches": 5,
+    "team1_wins": 0,
+    "team2_wins": 5
+  },
+  "Gujarat Titans||Kolkata Knight Riders": {
+    "team1": "Gujarat Titans",
+    "team2": "Kolkata Knight Riders",
+    "matches": 4,
+    "team1_wins": 3,
+    "team2_wins": 1
+  },
+  "Gujarat Titans||Lucknow Super Giants": {
+    "team1": "Gujarat Titans",
+    "team2": "Lucknow Super Giants",
+    "matches": 7,
+    "team1_wins": 4,
+    "team2_wins": 3
+  },
+  "Gujarat Titans||Mumbai Indians": {
+    "team1": "Gujarat Titans",
+    "team2": "Mumbai Indians",
+    "matches": 8,
+    "team1_wins": 5,
+    "team2_wins": 3
+  },
+  "Gujarat Titans||Punjab Kings": {
+    "team1": "Gujarat Titans",
+    "team2": "Punjab Kings",
+    "matches": 6,
+    "team1_wins": 3,
+    "team2_wins": 3
+  },
+  "Gujarat Titans||Rajasthan Royals": {
+    "team1": "Gujarat Titans",
+    "team2": "Rajasthan Royals",
+    "matches": 8,
+    "team1_wins": 6,
+    "team2_wins": 2
+  },
+  "Gujarat Titans||Royal Challengers Bengaluru": {
+    "team1": "Gujarat Titans",
+    "team2": "Royal Challengers Bengaluru",
+    "matches": 6,
+    "team1_wins": 3,
+    "team2_wins": 3
+  },
+  "Gujarat Titans||Sunrisers Hyderabad": {
+    "team1": "Gujarat Titans",
+    "team2": "Sunrisers Hyderabad",
+    "matches": 6,
+    "team1_wins": 5,
+    "team2_wins": 1
+  },
+  "Kochi Tuskers Kerala||Kolkata Knight Riders": {
+    "team1": "Kochi Tuskers Kerala",
+    "team2": "Kolkata Knight Riders",
+    "matches": 2,
+    "team1_wins": 2,
+    "team2_wins": 0
+  },
+  "Kochi Tuskers Kerala||Mumbai Indians": {
+    "team1": "Kochi Tuskers Kerala",
+    "team2": "Mumbai Indians",
+    "matches": 1,
+    "team1_wins": 1,
+    "team2_wins": 0
+  },
+  "Kochi Tuskers Kerala||Pune Warriors": {
+    "team1": "Kochi Tuskers Kerala",
+    "team2": "Pune Warriors",
+    "matches": 1,
+    "team1_wins": 0,
+    "team2_wins": 1
+  },
+  "Kochi Tuskers Kerala||Punjab Kings": {
+    "team1": "Kochi Tuskers Kerala",
+    "team2": "Punjab Kings",
+    "matches": 1,
+    "team1_wins": 0,
+    "team2_wins": 1
+  },
+  "Kochi Tuskers Kerala||Rajasthan Royals": {
+    "team1": "Kochi Tuskers Kerala",
+    "team2": "Rajasthan Royals",
+    "matches": 2,
+    "team1_wins": 1,
+    "team2_wins": 1
+  },
+  "Kochi Tuskers Kerala||Royal Challengers Bengaluru": {
+    "team1": "Kochi Tuskers Kerala",
+    "team2": "Royal Challengers Bengaluru",
+    "matches": 2,
+    "team1_wins": 0,
+    "team2_wins": 2
+  },
+  "Kolkata Knight Riders||Lucknow Super Giants": {
+    "team1": "Kolkata Knight Riders",
+    "team2": "Lucknow Super Giants",
+    "matches": 6,
+    "team1_wins": 2,
+    "team2_wins": 4
+  },
+  "Kolkata Knight Riders||Mumbai Indians": {
+    "team1": "Kolkata Knight Riders",
+    "team2": "Mumbai Indians",
+    "matches": 35,
+    "team1_wins": 11,
+    "team2_wins": 24
+  },
+  "Kolkata Knight Riders||Pune Warriors": {
+    "team1": "Kolkata Knight Riders",
+    "team2": "Pune Warriors",
+    "matches": 5,
+    "team1_wins": 4,
+    "team2_wins": 1
+  },
+  "Kolkata Knight Riders||Punjab Kings": {
+    "team1": "Kolkata Knight Riders",
+    "team2": "Punjab Kings",
+    "matches": 35,
+    "team1_wins": 21,
+    "team2_wins": 13
+  },
+  "Kolkata Knight Riders||Rajasthan Royals": {
+    "team1": "Kolkata Knight Riders",
+    "team2": "Rajasthan Royals",
+    "matches": 30,
+    "team1_wins": 16,
+    "team2_wins": 12
+  },
+  "Kolkata Knight Riders||Rising Pune Supergiant": {
+    "team1": "Kolkata Knight Riders",
+    "team2": "Rising Pune Supergiant",
+    "matches": 4,
+    "team1_wins": 3,
+    "team2_wins": 1
+  },
+  "Kolkata Knight Riders||Royal Challengers Bengaluru": {
+    "team1": "Kolkata Knight Riders",
+    "team2": "Royal Challengers Bengaluru",
+    "matches": 35,
+    "team1_wins": 20,
+    "team2_wins": 15
+  },
+  "Kolkata Knight Riders||Sunrisers Hyderabad": {
+    "team1": "Kolkata Knight Riders",
+    "team2": "Sunrisers Hyderabad",
+    "matches": 30,
+    "team1_wins": 19,
+    "team2_wins": 10
+  },
+  "Lucknow Super Giants||Mumbai Indians": {
+    "team1": "Lucknow Super Giants",
+    "team2": "Mumbai Indians",
+    "matches": 8,
+    "team1_wins": 6,
+    "team2_wins": 2
+  },
+  "Lucknow Super Giants||Punjab Kings": {
+    "team1": "Lucknow Super Giants",
+    "team2": "Punjab Kings",
+    "matches": 6,
+    "team1_wins": 3,
+    "team2_wins": 3
+  },
+  "Lucknow Super Giants||Rajasthan Royals": {
+    "team1": "Lucknow Super Giants",
+    "team2": "Rajasthan Royals",
+    "matches": 6,
+    "team1_wins": 2,
+    "team2_wins": 4
+  },
+  "Lucknow Super Giants||Royal Challengers Bengaluru": {
+    "team1": "Lucknow Super Giants",
+    "team2": "Royal Challengers Bengaluru",
+    "matches": 6,
+    "team1_wins": 2,
+    "team2_wins": 4
+  },
+  "Lucknow Super Giants||Sunrisers Hyderabad": {
+    "team1": "Lucknow Super Giants",
+    "team2": "Sunrisers Hyderabad",
+    "matches": 6,
+    "team1_wins": 4,
+    "team2_wins": 2
+  },
+  "Mumbai Indians||Pune Warriors": {
+    "team1": "Mumbai Indians",
+    "team2": "Pune Warriors",
+    "matches": 6,
+    "team1_wins": 5,
+    "team2_wins": 1
+  },
+  "Mumbai Indians||Punjab Kings": {
+    "team1": "Mumbai Indians",
+    "team2": "Punjab Kings",
+    "matches": 34,
+    "team1_wins": 17,
+    "team2_wins": 16
+  },
+  "Mumbai Indians||Rajasthan Royals": {
+    "team1": "Mumbai Indians",
+    "team2": "Rajasthan Royals",
+    "matches": 30,
+    "team1_wins": 16,
+    "team2_wins": 14
+  },
+  "Mumbai Indians||Rising Pune Supergiant": {
+    "team1": "Mumbai Indians",
+    "team2": "Rising Pune Supergiant",
+    "matches": 6,
+    "team1_wins": 2,
+    "team2_wins": 4
+  },
+  "Mumbai Indians||Royal Challengers Bengaluru": {
+    "team1": "Mumbai Indians",
+    "team2": "Royal Challengers Bengaluru",
+    "matches": 34,
+    "team1_wins": 19,
+    "team2_wins": 14
+  },
+  "Mumbai Indians||Sunrisers Hyderabad": {
+    "team1": "Mumbai Indians",
+    "team2": "Sunrisers Hyderabad",
+    "matches": 25,
+    "team1_wins": 14,
+    "team2_wins": 10
+  },
+  "Pune Warriors||Punjab Kings": {
+    "team1": "Pune Warriors",
+    "team2": "Punjab Kings",
+    "matches": 6,
+    "team1_wins": 3,
+    "team2_wins": 3
+  },
+  "Pune Warriors||Rajasthan Royals": {
+    "team1": "Pune Warriors",
+    "team2": "Rajasthan Royals",
+    "matches": 5,
+    "team1_wins": 1,
+    "team2_wins": 4
+  },
+  "Pune Warriors||Royal Challengers Bengaluru": {
+    "team1": "Pune Warriors",
+    "team2": "Royal Challengers Bengaluru",
+    "matches": 5,
+    "team1_wins": 0,
+    "team2_wins": 5
+  },
+  "Pune Warriors||Sunrisers Hyderabad": {
+    "team1": "Pune Warriors",
+    "team2": "Sunrisers Hyderabad",
+    "matches": 2,
+    "team1_wins": 0,
+    "team2_wins": 2
+  },
+  "Punjab Kings||Rajasthan Royals": {
+    "team1": "Punjab Kings",
+    "team2": "Rajasthan Royals",
+    "matches": 30,
+    "team1_wins": 12,
+    "team2_wins": 17
+  },
+  "Punjab Kings||Rising Pune Supergiant": {
+    "team1": "Punjab Kings",
+    "team2": "Rising Pune Supergiant",
+    "matches": 4,
+    "team1_wins": 2,
+    "team2_wins": 2
+  },
+  "Punjab Kings||Royal Challengers Bengaluru": {
+    "team1": "Punjab Kings",
+    "team2": "Royal Challengers Bengaluru",
+    "matches": 37,
+    "team1_wins": 18,
+    "team2_wins": 19
+  },
+  "Punjab Kings||Sunrisers Hyderabad": {
+    "team1": "Punjab Kings",
+    "team2": "Sunrisers Hyderabad",
+    "matches": 24,
+    "team1_wins": 7,
+    "team2_wins": 17
+  },
+  "Rajasthan Royals||Royal Challengers Bengaluru": {
+    "team1": "Rajasthan Royals",
+    "team2": "Royal Challengers Bengaluru",
+    "matches": 33,
+    "team1_wins": 14,
+    "team2_wins": 17
+  },
+  "Rajasthan Royals||Sunrisers Hyderabad": {
+    "team1": "Rajasthan Royals",
+    "team2": "Sunrisers Hyderabad",
+    "matches": 21,
+    "team1_wins": 9,
+    "team2_wins": 12
+  },
+  "Rising Pune Supergiant||Royal Challengers Bengaluru": {
+    "team1": "Rising Pune Supergiant",
+    "team2": "Royal Challengers Bengaluru",
+    "matches": 4,
+    "team1_wins": 2,
+    "team2_wins": 2
+  },
+  "Rising Pune Supergiant||Sunrisers Hyderabad": {
+    "team1": "Rising Pune Supergiant",
+    "team2": "Sunrisers Hyderabad",
+    "matches": 4,
+    "team1_wins": 3,
+    "team2_wins": 1
+  },
+  "Royal Challengers Bengaluru||Sunrisers Hyderabad": {
+    "team1": "Royal Challengers Bengaluru",
+    "team2": "Sunrisers Hyderabad",
+    "matches": 25,
+    "team1_wins": 11,
+    "team2_wins": 13
+  }
+>>>>>>> f72c14af486ef6d81c9ffe27971837728619bb97
 }

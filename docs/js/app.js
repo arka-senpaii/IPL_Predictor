@@ -6,6 +6,7 @@
 const DATA = {};
 let allMatches = [];
 
+<<<<<<< HEAD
 // IPL Team metadata: colors, Wikipedia logo URLs, abbreviation
 const TEAM_META = {
   "Chennai Super Kings": {
@@ -68,6 +69,25 @@ const TEAM_META = {
     abbr: "GL", color: "#e44d26",
     logo: "assets/logos/gujarat_lions.png"
   },
+=======
+// IPL Team metadata: colors, logo file, abbreviation
+const TEAM_META = {
+  "Chennai Super Kings": { abbr: "CSK", color: "#f5a623", logo: "assets/logos/csk.png" },
+  "Mumbai Indians":      { abbr: "MI",  color: "#0066b2", logo: "assets/logos/mi.png" },
+  "Royal Challengers Bengaluru": { abbr: "RCB", color: "#e01c23", logo: "assets/logos/rcb.png" },
+  "Kolkata Knight Riders": { abbr: "KKR", color: "#7c3fa5", logo: "assets/logos/kkr.png" },
+  "Sunrisers Hyderabad": { abbr: "SRH", color: "#f4682c", logo: "assets/logos/srh.png" },
+  "Delhi Capitals":      { abbr: "DC",  color: "#0078bc", logo: "assets/logos/dc.png" },
+  "Rajasthan Royals":    { abbr: "RR",  color: "#e91e8c", logo: "assets/logos/rr.png" },
+  "Punjab Kings":        { abbr: "PBKS",color: "#ed1b24", logo: "assets/logos/pbks.png" },
+  "Gujarat Titans":      { abbr: "GT",  color: "#1c4887", logo: "assets/logos/gt.png" },
+  "Lucknow Super Giants":{ abbr: "LSG", color: "#a2d5f2", logo: "assets/logos/lsg.png" },
+  "Deccan Chargers":     { abbr: "DC",  color: "#f05a22", logo: "assets/logos/dc_old.png" },
+  "Rising Pune Supergiant": { abbr: "RPS", color: "#6c4b9e", logo: "assets/logos/rps.png" },
+  "Kochi Tuskers Kerala": { abbr: "KTK", color: "#f7941e", logo: "assets/logos/ktk.png" },
+  "Pune Warriors":       { abbr: "PW",  color: "#1c87c9", logo: "assets/logos/pw.png" },
+  "Gujarat Lions":       { abbr: "GL",  color: "#e44d26", logo: "assets/logos/gt.png" },
+>>>>>>> f72c14af486ef6d81c9ffe27971837728619bb97
 };
 
 function getTeamMeta(name) {
@@ -77,6 +97,7 @@ function getTeamMeta(name) {
 function teamLogo(name, size = 28) {
   const meta = getTeamMeta(name);
   if (meta.logo) {
+<<<<<<< HEAD
     // We add an onerror handler that replaces the broken image with our badge
     return `<img src="${meta.logo}" width="${size}" height="${size}" 
              style="object-fit:contain;border-radius:4px" 
@@ -100,6 +121,23 @@ function teamAbbrBadge(abbr, color, size = 28) {
   const span = document.createElement("span");
   span.innerHTML = teamAbbrBadgeString(abbr, color, size);
   return span.firstElementChild;
+=======
+    return `<img src="${meta.logo}" width="${size}" height="${size}" 
+             style="object-fit:contain;border-radius:4px" 
+             onerror="this.replaceWith(teamAbbrBadge('${meta.abbr}', '${meta.color}', ${size}))"
+             alt="${name}">`;
+  }
+  return teamAbbrBadge(meta.abbr, meta.color, size);
+}
+
+function teamAbbrBadge(abbr, color, size = 28) {
+  const span = document.createElement("span");
+  span.style.cssText = `display:inline-flex;align-items:center;justify-content:center;
+    width:${size}px;height:${size}px;border-radius:4px;background:${color}20;
+    border:1px solid ${color}60;color:${color};font-weight:800;font-size:${Math.floor(size*0.35)}px;`;
+  span.textContent = abbr;
+  return span;
+>>>>>>> f72c14af486ef6d81c9ffe27971837728619bb97
 }
 
 // ─── Load Data ───────────────────────────────────────────

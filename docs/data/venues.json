@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "Arun Jaitley Stadium, Delhi": {
     "venue": "Arun Jaitley Stadium, Delhi",
@@ -332,4 +333,340 @@
     "avg_score_inn1": 170.5,
     "avg_score_inn2": 159.9
   }
+=======
+{
+  "Arun Jaitley Stadium, Delhi": {
+    "venue": "Arun Jaitley Stadium, Delhi",
+    "city": "Delhi",
+    "matches": 97,
+    "most_wins": "Delhi Capitals",
+    "most_wins_count": 36,
+    "avg_score_inn1": 171.8,
+    "avg_score_inn2": 155.6
+  },
+  "Barabati Stadium": {
+    "venue": "Barabati Stadium",
+    "city": "Cuttack",
+    "matches": 7,
+    "most_wins": "Deccan Chargers",
+    "most_wins_count": 3,
+    "avg_score_inn1": 167.7,
+    "avg_score_inn2": 157.7
+  },
+  "Barsapara Cricket Stadium, Guwahati": {
+    "venue": "Barsapara Cricket Stadium, Guwahati",
+    "city": "Guwahati",
+    "matches": 5,
+    "most_wins": "Punjab Kings",
+    "most_wins_count": 2,
+    "avg_score_inn1": 174.6,
+    "avg_score_inn2": 161.6
+  },
+  "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow": {
+    "venue": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",
+    "city": "Lucknow",
+    "matches": 22,
+    "most_wins": "Lucknow Super Giants",
+    "most_wins_count": 9,
+    "avg_score_inn1": 175.4,
+    "avg_score_inn2": 158.5
+  },
+  "Brabourne Stadium, Mumbai": {
+    "venue": "Brabourne Stadium, Mumbai",
+    "city": "Mumbai",
+    "matches": 27,
+    "most_wins": "Mumbai Indians",
+    "most_wins_count": 7,
+    "avg_score_inn1": 178.5,
+    "avg_score_inn2": 166.1
+  },
+  "Buffalo Park": {
+    "venue": "Buffalo Park",
+    "city": "East London",
+    "matches": 3,
+    "most_wins": "Mumbai Indians",
+    "most_wins_count": 1,
+    "avg_score_inn1": 147.3,
+    "avg_score_inn2": 119.0
+  },
+  "De Beers Diamond Oval": {
+    "venue": "De Beers Diamond Oval",
+    "city": "Kimberley",
+    "matches": 3,
+    "most_wins": "Punjab Kings",
+    "most_wins_count": 1,
+    "avg_score_inn1": 158.0,
+    "avg_score_inn2": 141.0
+  },
+  "Dr DY Patil Sports Academy, Mumbai": {
+    "venue": "Dr DY Patil Sports Academy, Mumbai",
+    "city": "Mumbai",
+    "matches": 37,
+    "most_wins": "Mumbai Indians",
+    "most_wins_count": 6,
+    "avg_score_inn1": 159.6,
+    "avg_score_inn2": 148.0
+  },
+  "Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium, Visakhapatnam": {
+    "venue": "Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium, Visakhapatnam",
+    "city": "Visakhapatnam",
+    "matches": 17,
+    "most_wins": "Delhi Capitals",
+    "most_wins_count": 5,
+    "avg_score_inn1": 169.5,
+    "avg_score_inn2": 141.9
+  },
+  "Dubai International Cricket Stadium": {
+    "venue": "Dubai International Cricket Stadium",
+    "city": "Unknown",
+    "matches": 46,
+    "most_wins": "Chennai Super Kings",
+    "most_wins_count": 9,
+    "avg_score_inn1": 163.8,
+    "avg_score_inn2": 149.1
+  },
+  "Eden Gardens, Kolkata": {
+    "venue": "Eden Gardens, Kolkata",
+    "city": "Kolkata",
+    "matches": 100,
+    "most_wins": "Kolkata Knight Riders",
+    "most_wins_count": 54,
+    "avg_score_inn1": 168.6,
+    "avg_score_inn2": 153.6
+  },
+  "Green Park": {
+    "venue": "Green Park",
+    "city": "Kanpur",
+    "matches": 4,
+    "most_wins": "Gujarat Lions",
+    "most_wins_count": 2,
+    "avg_score_inn1": 161.2,
+    "avg_score_inn2": 163.2
+  },
+  "Himachal Pradesh Cricket Association Stadium, Dharamsala": {
+    "venue": "Himachal Pradesh Cricket Association Stadium, Dharamsala",
+    "city": "Dharamsala",
+    "matches": 15,
+    "most_wins": "Punjab Kings",
+    "most_wins_count": 6,
+    "avg_score_inn1": 183.1,
+    "avg_score_inn2": 148.1
+  },
+  "Holkar Cricket Stadium": {
+    "venue": "Holkar Cricket Stadium",
+    "city": "Indore",
+    "matches": 9,
+    "most_wins": "Punjab Kings",
+    "most_wins_count": 4,
+    "avg_score_inn1": 160.3,
+    "avg_score_inn2": 158.8
+  },
+  "JSCA International Stadium Complex": {
+    "venue": "JSCA International Stadium Complex",
+    "city": "Ranchi",
+    "matches": 7,
+    "most_wins": "Chennai Super Kings",
+    "most_wins_count": 3,
+    "avg_score_inn1": 149.0,
+    "avg_score_inn2": 144.7
+  },
+  "Kingsmead": {
+    "venue": "Kingsmead",
+    "city": "Durban",
+    "matches": 15,
+    "most_wins": "Delhi Capitals",
+    "most_wins_count": 3,
+    "avg_score_inn1": 152.0,
+    "avg_score_inn2": 138.2
+  },
+  "M Chinnaswamy Stadium, Bengaluru": {
+    "venue": "M Chinnaswamy Stadium, Bengaluru",
+    "city": "Bangalore",
+    "matches": 99,
+    "most_wins": "Royal Challengers Bengaluru",
+    "most_wins_count": 45,
+    "avg_score_inn1": 173.0,
+    "avg_score_inn2": 154.0
+  },
+  "MA Chidambaram Stadium, Chepauk, Chennai": {
+    "venue": "MA Chidambaram Stadium, Chepauk, Chennai",
+    "city": "Chennai",
+    "matches": 91,
+    "most_wins": "Chennai Super Kings",
+    "most_wins_count": 51,
+    "avg_score_inn1": 163.9,
+    "avg_score_inn2": 150.1
+  },
+  "Maharaja Yadavindra Singh International Cricket Stadium, Mullanpur": {
+    "venue": "Maharaja Yadavindra Singh International Cricket Stadium, Mullanpur",
+    "city": "Mohali",
+    "matches": 11,
+    "most_wins": "Punjab Kings",
+    "most_wins_count": 3,
+    "avg_score_inn1": 168.9,
+    "avg_score_inn2": 160.2
+  },
+  "Maharashtra Cricket Association Stadium, Pune": {
+    "venue": "Maharashtra Cricket Association Stadium, Pune",
+    "city": "Pune",
+    "matches": 35,
+    "most_wins": "Chennai Super Kings",
+    "most_wins_count": 6,
+    "avg_score_inn1": 168.3,
+    "avg_score_inn2": 149.3
+  },
+  "Narendra Modi Stadium, Ahmedabad": {
+    "venue": "Narendra Modi Stadium, Ahmedabad",
+    "city": "Ahmedabad",
+    "matches": 45,
+    "most_wins": "Gujarat Titans",
+    "most_wins_count": 13,
+    "avg_score_inn1": 180.4,
+    "avg_score_inn2": 164.5
+  },
+  "Nehru Stadium": {
+    "venue": "Nehru Stadium",
+    "city": "Kochi",
+    "matches": 5,
+    "most_wins": "Kochi Tuskers Kerala",
+    "most_wins_count": 2,
+    "avg_score_inn1": 146.8,
+    "avg_score_inn2": 125.8
+  },
+  "New Wanderers Stadium": {
+    "venue": "New Wanderers Stadium",
+    "city": "Johannesburg",
+    "matches": 8,
+    "most_wins": "Royal Challengers Bengaluru",
+    "most_wins_count": 3,
+    "avg_score_inn1": 144.0,
+    "avg_score_inn2": 142.5
+  },
+  "Newlands": {
+    "venue": "Newlands",
+    "city": "Cape Town",
+    "matches": 7,
+    "most_wins": "Deccan Chargers",
+    "most_wins_count": 2,
+    "avg_score_inn1": 139.4,
+    "avg_score_inn2": 112.6
+  },
+  "OUTsurance Oval": {
+    "venue": "OUTsurance Oval",
+    "city": "Bloemfontein",
+    "matches": 2,
+    "most_wins": "Punjab Kings",
+    "most_wins_count": 1,
+    "avg_score_inn1": 135.0,
+    "avg_score_inn2": 129.5
+  },
+  "Punjab Cricket Association IS Bindra Stadium, Mohali, Chandigarh": {
+    "venue": "Punjab Cricket Association IS Bindra Stadium, Mohali, Chandigarh",
+    "city": "Chandigarh",
+    "matches": 61,
+    "most_wins": "Punjab Kings",
+    "most_wins_count": 31,
+    "avg_score_inn1": 168.3,
+    "avg_score_inn2": 157.4
+  },
+  "Rajiv Gandhi International Stadium, Uppal, Hyderabad": {
+    "venue": "Rajiv Gandhi International Stadium, Uppal, Hyderabad",
+    "city": "Hyderabad",
+    "matches": 83,
+    "most_wins": "Sunrisers Hyderabad",
+    "most_wins_count": 37,
+    "avg_score_inn1": 164.9,
+    "avg_score_inn2": 152.6
+  },
+  "Saurashtra Cricket Association Stadium": {
+    "venue": "Saurashtra Cricket Association Stadium",
+    "city": "Rajkot",
+    "matches": 10,
+    "most_wins": "Gujarat Lions",
+    "most_wins_count": 3,
+    "avg_score_inn1": 168.9,
+    "avg_score_inn2": 162.7
+  },
+  "Sawai Mansingh Stadium, Jaipur": {
+    "venue": "Sawai Mansingh Stadium, Jaipur",
+    "city": "Jaipur",
+    "matches": 64,
+    "most_wins": "Rajasthan Royals",
+    "most_wins_count": 38,
+    "avg_score_inn1": 165.5,
+    "avg_score_inn2": 152.6
+  },
+  "Shaheed Veer Narayan Singh International Stadium": {
+    "venue": "Shaheed Veer Narayan Singh International Stadium",
+    "city": "Raipur",
+    "matches": 6,
+    "most_wins": "Delhi Capitals",
+    "most_wins_count": 4,
+    "avg_score_inn1": 146.3,
+    "avg_score_inn2": 143.8
+  },
+  "Sharjah Cricket Stadium": {
+    "venue": "Sharjah Cricket Stadium",
+    "city": "Unknown",
+    "matches": 28,
+    "most_wins": "Punjab Kings",
+    "most_wins_count": 5,
+    "avg_score_inn1": 159.0,
+    "avg_score_inn2": 147.5
+  },
+  "Sheikh Zayed Stadium, Abu Dhabi": {
+    "venue": "Sheikh Zayed Stadium, Abu Dhabi",
+    "city": "Abu Dhabi",
+    "matches": 37,
+    "most_wins": "Mumbai Indians",
+    "most_wins_count": 8,
+    "avg_score_inn1": 158.9,
+    "avg_score_inn2": 146.6
+  },
+  "St George's Park": {
+    "venue": "St George's Park",
+    "city": "Port Elizabeth",
+    "matches": 7,
+    "most_wins": "Chennai Super Kings",
+    "most_wins_count": 2,
+    "avg_score_inn1": 159.0,
+    "avg_score_inn2": 131.4
+  },
+  "Subrata Roy Sahara Stadium": {
+    "venue": "Subrata Roy Sahara Stadium",
+    "city": "Pune",
+    "matches": 16,
+    "most_wins": "Pune Warriors",
+    "most_wins_count": 4,
+    "avg_score_inn1": 149.4,
+    "avg_score_inn2": 133.6
+  },
+  "SuperSport Park": {
+    "venue": "SuperSport Park",
+    "city": "Centurion",
+    "matches": 12,
+    "most_wins": "Rajasthan Royals",
+    "most_wins_count": 2,
+    "avg_score_inn1": 154.8,
+    "avg_score_inn2": 149.6
+  },
+  "Vidarbha Cricket Association Stadium, Jamtha": {
+    "venue": "Vidarbha Cricket Association Stadium, Jamtha",
+    "city": "Nagpur",
+    "matches": 3,
+    "most_wins": "Deccan Chargers",
+    "most_wins_count": 2,
+    "avg_score_inn1": 149.3,
+    "avg_score_inn2": 144.7
+  },
+  "Wankhede Stadium, Mumbai": {
+    "venue": "Wankhede Stadium, Mumbai",
+    "city": "Mumbai",
+    "matches": 125,
+    "most_wins": "Mumbai Indians",
+    "most_wins_count": 56,
+    "avg_score_inn1": 170.5,
+    "avg_score_inn2": 159.9
+  }
+>>>>>>> f72c14af486ef6d81c9ffe27971837728619bb97
 }

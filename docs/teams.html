@@ -104,8 +104,12 @@ function renderTeamsGrid() {
       <div class="team-card" onclick="showTeamDetail('${name.replace(/'/g, "\\'")}')">
         <img src="${meta.logo}"
           alt="${name}"
+<<<<<<< HEAD
           onerror="this.outerHTML = teamAbbrBadgeString('${meta.abbr}', '${meta.color}', 64)"
           style="margin-bottom:1rem;${!meta.logo || meta.logo === '' ? 'display:none' : ''}">
+=======
+          onerror="this.style.display='none'">
+>>>>>>> f72c14af486ef6d81c9ffe27971837728619bb97
         <div class="team-name">${name}</div>
         <div class="win-pct">${data.win_pct}%</div>
         <div class="team-record">${data.wins}W / ${data.losses}L · ${data.matches} matches</div>
@@ -130,7 +134,11 @@ function showTeamDetail(teamName) {
     <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:1.5rem">
       <img src="${meta.logo}" width="72" height="72"
         style="object-fit:contain;filter:drop-shadow(0 4px 16px rgba(0,0,0,0.5))"
+<<<<<<< HEAD
         onerror="this.outerHTML = teamAbbrBadgeString('${meta.abbr}', '${meta.color}', 72)"
+=======
+        onerror="this.style.display='none'"
+>>>>>>> f72c14af486ef6d81c9ffe27971837728619bb97
         alt="${teamName}">
       <div>
         <h2 style="font-size:1.6rem;font-weight:900">${teamName}</h2>
