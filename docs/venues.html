@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grounds — IPL Predictor</title>
+  <meta name="description" content="All IPL cricket grounds with stadium images, match records, and average scores.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/logos/ipl.png">
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="nav-brand"><span class="trophy">🏏</span> IPL Predictor</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="matches.html">Matches</a></li>
+    <li><a href="teams.html">Teams</a></li>
+    <li><a href="seasons.html">Seasons</a></li>
+    <li><a href="venues.html">Grounds</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="container" style="padding-top:2.5rem">
+    <div class="section-header">
+      <div>
+        <h2>IPL <span>Grounds</span></h2>
+        <div style="font-size:0.85rem;color:var(--text-muted);margin-top:0.25rem">
+          <span id="venue-count">—</span> venues · click a ground to filter matches
+        </div>
+      </div>
+      <input type="text" class="search-input" id="venue-search"
+        placeholder="🔍 Search venue or city…"
+        style="max-width:260px" oninput="filterVenues()">
+    </div>
+
+    <div class="venue-grid" id="venue-grid">
+      <div class="spinner"></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>IPL Predictor &middot; Data: IPL 2008–2024 &middot; <a href="index.html">Home</a></p>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+<script>
+let allVenues = [];
+
+// Map of venue name keywords → ground image filename
+const GROUND_IMAGES = {
+  "chinnaswamy": "chinnaswamy.jpg",
+  "wankhede": "wankhede.jpg",
+  "eden gardens": "eden_gardens.jpg",
+  "chepauk": "chepauk.jpg",
+  "feroz shah kotla": "kotla.jpg",
+  "arun jaitley": "kotla.jpg",
+  "mohali": "mohali.jpg",
+  "punjab cricket": "mohali.jpg",
+  "rajiv gandhi": "rajiv_gandhi.jpg",
+  "hyderabad": "rajiv_gandhi.jpg",
+  "sawai mansingh": "sawai_mansingh.jpg",
+  "jaipur": "sawai_mansingh.jpg",
+  "narendra modi": "narendra_modi.jpg",
+  "ahmedabad": "narendra_modi.jpg",
+  "motera": "narendra_modi.jpg",
+  "brabourne": "brabourne.jpg",
+  "mumbai": "wankhede.jpg",
+  "lucknow": "ekana.jpg",
+  "ekana": "ekana.jpg",
+  "dharamsala": "dharamsala.jpg",
+  "himachal": "dharamsala.jpg",
+  "vizag": "vizag.jpg",
+  "visakhapatnam": "vizag.jpg",
+  "kolkata": "eden_gardens.jpg",
+  "pune": "mca.jpg",
+  "mca": "mca.jpg",
+};
+
+function getGroundImage(venueName) {
+  const name = venueName.toLowerCase();
+  for (const [key, img] of Object.entries(GROUND_IMAGES)) {
+    if (name.includes(key)) return `assets/grounds/${img}`;
+  }
+  return null;
+}
+
+(async () => {
+  await loadAllData();
+  allVenues = Object.entries(DATA.venues || {}).sort((a, b) => b[1].matches - a[1].matches);
+  document.getElementById("venue-count").textContent = allVenues.length;
+  renderVenues(allVenues);
+})();
+
+function filterVenues() {
+  const q = document.getElementById("venue-search").value.toLowerCase();
+  const filtered = allVenues.filter(([name, v]) =>
+    name.toLowerCase().includes(q) || (v.city || "").toLowerCase().includes(q));
+  renderVenues(filtered);
+}
+
+function renderVenues(venues) {
+  const grid = document.getElementById("venue-grid");
+  grid.innerHTML = venues.map(([name, v]) => {
+    const img = getGroundImage(name);
+    const imageEl = img
+      ? `<img class="venue-img" src="${img}" alt="${name}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=&quot;venue-img-placeholder&quot;>🏟️</div>'">`
+      : `<div class="venue-img-placeholder">🏟️</div>`;
+
+    return `
+      <div class="venue-card" onclick="window.location='matches.html?venue=${encodeURIComponent(name)}'" title="View ${name} matches">
+        ${imageEl}
+        <div class="venue-info">
+          <h3>${name}</h3>
+          <p>${v.city || ""}</p>
+          <div class="venue-stat">
+            <span>${v.matches} matches</span>
+            <span class="stat-val">Avg: ${v.avg_score_inn1}/${v.avg_score_inn2}</span>
+          </div>
+          ${v.most_wins ? `
+          <div class="venue-stat" style="margin-top:0.3rem">
+            <span style="font-size:0.75rem;color:var(--text-muted)">Most wins:</span>
+            <span class="stat-val" style="font-size:0.78rem">${v.most_wins} (${v.most_wins_count})</span>
+          </div>` : ""}
+        </div>
+      </div>`;
+  }).join("") || `<div style="color:var(--text-muted);padding:2rem">No venues found.</div>`;
+}
+</script>
+</body>
+</html>

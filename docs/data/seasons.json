@@ -1,0 +1,182 @@
+{
+  "2007/08": {
+    "season": "2007/08",
+    "matches": 58,
+    "champion": "Rajasthan Royals",
+    "runner_up": "Delhi Capitals",
+    "orange_cap": "SE Marsh",
+    "orange_cap_runs": 616,
+    "purple_cap": "Sohail Tanvir",
+    "purple_cap_wickets": 22
+  },
+  "2009": {
+    "season": "2009",
+    "matches": 57,
+    "champion": "Deccan Chargers",
+    "runner_up": "Delhi Capitals",
+    "orange_cap": "ML Hayden",
+    "orange_cap_runs": 572,
+    "purple_cap": "RP Singh",
+    "purple_cap_wickets": 23
+  },
+  "2009/10": {
+    "season": "2009/10",
+    "matches": 60,
+    "champion": "Mumbai Indians",
+    "runner_up": "Royal Challengers Bengaluru",
+    "orange_cap": "SR Tendulkar",
+    "orange_cap_runs": 618,
+    "purple_cap": "PP Ojha",
+    "purple_cap_wickets": 21
+  },
+  "2011": {
+    "season": "2011",
+    "matches": 73,
+    "champion": "Mumbai Indians",
+    "runner_up": "Kolkata Knight Riders",
+    "orange_cap": "CH Gayle",
+    "orange_cap_runs": 608,
+    "purple_cap": "SL Malinga",
+    "purple_cap_wickets": 28
+  },
+  "2012": {
+    "season": "2012",
+    "matches": 74,
+    "champion": "Chennai Super Kings",
+    "runner_up": "Mumbai Indians",
+    "orange_cap": "CH Gayle",
+    "orange_cap_runs": 733,
+    "purple_cap": "M Morkel",
+    "purple_cap_wickets": 25
+  },
+  "2013": {
+    "season": "2013",
+    "matches": 76,
+    "champion": "Mumbai Indians",
+    "runner_up": "Chennai Super Kings",
+    "orange_cap": "MEK Hussey",
+    "orange_cap_runs": 733,
+    "purple_cap": "DJ Bravo",
+    "purple_cap_wickets": 32
+  },
+  "2014": {
+    "season": "2014",
+    "matches": 60,
+    "champion": "Kolkata Knight Riders",
+    "runner_up": "Punjab Kings",
+    "orange_cap": "RV Uthappa",
+    "orange_cap_runs": 660,
+    "purple_cap": "MM Sharma",
+    "purple_cap_wickets": 23
+  },
+  "2015": {
+    "season": "2015",
+    "matches": 59,
+    "champion": "Mumbai Indians",
+    "runner_up": "Chennai Super Kings",
+    "orange_cap": "DA Warner",
+    "orange_cap_runs": 562,
+    "purple_cap": "DJ Bravo",
+    "purple_cap_wickets": 26
+  },
+  "2016": {
+    "season": "2016",
+    "matches": 60,
+    "champion": "Sunrisers Hyderabad",
+    "runner_up": "Kolkata Knight Riders",
+    "orange_cap": "V Kohli",
+    "orange_cap_runs": 973,
+    "purple_cap": "B Kumar",
+    "purple_cap_wickets": 23
+  },
+  "2017": {
+    "season": "2017",
+    "matches": 59,
+    "champion": "Mumbai Indians",
+    "runner_up": "Rising Pune Supergiant",
+    "orange_cap": "DA Warner",
+    "orange_cap_runs": 641,
+    "purple_cap": "B Kumar",
+    "purple_cap_wickets": 26
+  },
+  "2018": {
+    "season": "2018",
+    "matches": 60,
+    "champion": "Chennai Super Kings",
+    "runner_up": "Sunrisers Hyderabad",
+    "orange_cap": "KS Williamson",
+    "orange_cap_runs": 735,
+    "purple_cap": "AJ Tye",
+    "purple_cap_wickets": 24
+  },
+  "2019": {
+    "season": "2019",
+    "matches": 60,
+    "champion": "Mumbai Indians",
+    "runner_up": "Chennai Super Kings",
+    "orange_cap": "DA Warner",
+    "orange_cap_runs": 692,
+    "purple_cap": "Imran Tahir",
+    "purple_cap_wickets": 26
+  },
+  "2020/21": {
+    "season": "2020/21",
+    "matches": 60,
+    "champion": "Mumbai Indians",
+    "runner_up": "Delhi Capitals",
+    "orange_cap": "KL Rahul",
+    "orange_cap_runs": 676,
+    "purple_cap": "K Rabada",
+    "purple_cap_wickets": 32
+  },
+  "2021": {
+    "season": "2021",
+    "matches": 60,
+    "champion": "Chennai Super Kings",
+    "runner_up": "Kolkata Knight Riders",
+    "orange_cap": "RD Gaikwad",
+    "orange_cap_runs": 635,
+    "purple_cap": "HV Patel",
+    "purple_cap_wickets": 32
+  },
+  "2022": {
+    "season": "2022",
+    "matches": 74,
+    "champion": "Gujarat Titans",
+    "runner_up": "Rajasthan Royals",
+    "orange_cap": "JC Buttler",
+    "orange_cap_runs": 863,
+    "purple_cap": "YS Chahal",
+    "purple_cap_wickets": 27
+  },
+  "2023": {
+    "season": "2023",
+    "matches": 74,
+    "champion": "Chennai Super Kings",
+    "runner_up": "Gujarat Titans",
+    "orange_cap": "Shubman Gill",
+    "orange_cap_runs": 890,
+    "purple_cap": "Mohammed Shami",
+    "purple_cap_wickets": 28
+  },
+  "2024": {
+    "season": "2024",
+    "matches": 71,
+    "champion": "Kolkata Knight Riders",
+    "runner_up": "Sunrisers Hyderabad",
+    "orange_cap": "V Kohli",
+    "orange_cap_runs": 741,
+    "purple_cap": "HV Patel",
+    "purple_cap_wickets": 24
+  },
+  "2025": {
+    "season": "2025",
+    "matches": 74,
+    "champion": "Royal Challengers Bengaluru",
+    "runner_up": "Punjab Kings",
+    "orange_cap": "B Sai Sudharsan",
+    "orange_cap_runs": 759,
+    "purple_cap": "M Prasidh Krishna",
+    "purple_cap_wickets": 25
+  }
+}

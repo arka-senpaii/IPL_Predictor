@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPL Predictor — AI Match Winner Prediction</title>
+  <meta name="description" content="Predict IPL match winners using deep learning trained on historical IPL data. Explore past match stats, team records, and head-to-head comparisons.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/logos/ipl.png">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <a href="index.html" class="nav-brand">
+    <span class="trophy">🏏</span> IPL Predictor
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="matches.html">Matches</a></li>
+    <li><a href="teams.html">Teams</a></li>
+    <li><a href="seasons.html">Seasons</a></li>
+    <li><a href="venues.html">Grounds</a></li>
+  </ul>
+</nav>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">🤖 Deep Learning Powered</div>
+      <h1>
+        Predict <span class="gradient-text">IPL</span><br>
+        Match Winners
+      </h1>
+      <p>An AI model trained on 278,000+ balls of IPL history predicts match outcomes with team-by-team insights.</p>
+
+      <div class="stats-ticker" id="stats-ticker">
+        <div class="ticker-item"><span class="num" id="stat-matches">0</span><span class="label">Matches</span></div>
+        <div class="ticker-item"><span class="num" id="stat-teams">0</span><span class="label">Teams</span></div>
+        <div class="ticker-item"><span class="num" id="stat-seasons">0</span><span class="label">Seasons</span></div>
+        <div class="ticker-item"><span class="num" id="stat-venues">0</span><span class="label">Venues</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prediction Tool -->
+  <section class="page-section" style="padding-top:0">
+    <div class="container">
+      <div class="prediction-form card">
+        <div class="card-title">🔮 Match Predictor</div>
+
+        <div class="team-selectors">
+          <!-- Team 1 -->
+          <div class="team-select-box">
+            <label for="team1-sel">Team 1</label>
+            <div class="team-logo-preview" id="team1-preview">
+              <span style="color:var(--text-muted);font-size:0.85rem">Select a team</span>
+            </div>
+            <select class="form-select" id="team1-sel" onchange="updateTeamPreview(1)">
+              <option value="">Choose Team 1</option>
+            </select>
+          </div>
+
+          <div class="vs-badge">VS</div>
+
+          <!-- Team 2 -->
+          <div class="team-select-box">
+            <label for="team2-sel">Team 2</label>
+            <div class="team-logo-preview" id="team2-preview">
+              <span style="color:var(--text-muted);font-size:0.85rem">Select a team</span>
+            </div>
+            <select class="form-select" id="team2-sel" onchange="updateTeamPreview(2)">
+              <option value="">Choose Team 2</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="venue-row">
+          <div class="form-group">
+            <label for="venue-sel">Venue (optional)</label>
+            <select class="form-select" id="venue-sel">
+              <option value="">Any Venue</option>
+            </select>
+          </div>
+          <button class="btn btn-gold" onclick="runPrediction()" style="padding:0.75rem 2rem;white-space:nowrap">
+            ⚡ Predict Winner
+          </button>
+        </div>
+
+        <!-- Result -->
+        <div class="prediction-result" id="prediction-result">
+          <div style="display:flex;justify-content:space-between;margin-bottom:0.25rem" id="prob-labels">
+          </div>
+          <div class="prob-bars">
+            <div class="prob-bar-t1" id="prob-t1-bar" style="width:50%">
+              <span id="prob-t1-pct">50%</span>
+            </div>
+            <div class="prob-bar-t2" id="prob-t2-bar" style="width:50%">
+              <span id="prob-t2-pct">50%</span>
+            </div>
+          </div>
+          <div style="text-align:center">
+            <div class="winner-badge" id="winner-badge">
+              🏆 <span id="predicted-winner">—</span>
+            </div>
+            <div style="font-size:0.8rem;color:var(--text-muted);margin-top:0.5rem" id="h2h-summary"></div>
+            <span class="model-badge" style="margin-top:0.75rem">⚙️ Deep Learning Model</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Matches Preview -->
+      <div class="section-header" style="margin-top:3rem">
+        <h2>Recent <span>Matches</span></h2>
+        <a href="matches.html" class="btn btn-outline" style="font-size:0.85rem">View All →</a>
+      </div>
+      <div class="card" style="padding:0">
+        <div class="matches-table-wrapper" style="border:none">
+          <table class="matches-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Teams</th>
+                <th>Scores</th>
+                <th>Winner</th>
+                <th>Venue</th>
+              </tr>
+            </thead>
+            <tbody id="recent-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:1.25rem">
+        <a href="matches.html" class="btn btn-primary">Browse All Matches →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>IPL Predictor &middot; Built with TensorFlow Deep Learning &middot; Data: IPL 2008–2024</p>
+    <p style="margin-top:0.25rem">
+      <a href="matches.html">Matches</a> &middot;
+      <a href="teams.html">Teams</a> &middot;
+      <a href="seasons.html">Seasons</a>
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/charts.js"></script>
+<script>
+(async () => {
+  await loadAllData();
+
+  // Stats ticker
+  animateNumber(document.getElementById("stat-matches"), allMatches.length);
+  animateNumber(document.getElementById("stat-teams"), Object.keys(DATA.teams || {}).length);
+  animateNumber(document.getElementById("stat-seasons"), Object.keys(DATA.seasons || {}).length);
+  animateNumber(document.getElementById("stat-venues"), Object.keys(DATA.venues || {}).length);
+
+  // Populate dropdowns
+  populateTeamDropdowns("team1-sel", "team2-sel");
+  populateVenueDropdown("venue-sel");
+
+  // Recent matches
+  renderRecentMatches();
+})();
+
+function updateTeamPreview(num) {
+  const sel = document.getElementById(`team${num}-sel`);
+  const preview = document.getElementById(`team${num}-preview`);
+  const teamName = sel.value;
+  if (!teamName) {
+    preview.innerHTML = `<span style="color:var(--text-muted);font-size:0.85rem">Select a team</span>`;
+    return;
+  }
+  const meta = getTeamMeta(teamName);
+  preview.innerHTML = `
+    <img src="${meta.logo}" width="44" height="44"
+      style="object-fit:contain;border-radius:6px"
+      onerror="this.style.display='none'"
+      alt="${teamName}">
+    <div>
+      <div class="team-name-display">${teamName}</div>
+      <div style="font-size:0.75rem;color:var(--text-muted)">${meta.abbr}</div>
+    </div>`;
+}
+
+function runPrediction() {
+  const t1 = document.getElementById("team1-sel").value;
+  const t2 = document.getElementById("team2-sel").value;
+  const venue = document.getElementById("venue-sel").value;
+
+  if (!t1 || !t2) { alert("Please select both teams."); return; }
+  if (t1 === t2) { alert("Please select two different teams."); return; }
+
+  const pred = getPrediction(t1, t2, venue);
+  const t1pct = Math.round(pred.team1prob * 100);
+  const t2pct = 100 - t1pct;
+  const winner = t1pct >= t2pct ? t1 : t2;
+
+  const result = document.getElementById("prediction-result");
+  result.classList.add("show");
+
+  document.getElementById("prob-t1-bar").style.width = `${t1pct}%`;
+  document.getElementById("prob-t2-bar").style.width = `${t2pct}%`;
+  document.getElementById("prob-t1-pct").textContent = `${t1pct}%`;
+  document.getElementById("prob-t2-pct").textContent = `${t2pct}%`;
+
+  document.getElementById("prob-labels").innerHTML = `
+    <span style="color:var(--accent-blue);font-weight:700">${t1} (${t1pct}%)</span>
+    <span style="color:#e84545;font-weight:700">${t2} (${t2pct}%)</span>`;
+
+  document.getElementById("predicted-winner").textContent = winner;
+  document.getElementById("winner-badge").style.borderColor = getTeamColor(winner) + "60";
+  document.getElementById("winner-badge").style.color = getTeamColor(winner);
+
+  // H2H summary
+  const key1 = `${t1}||${t2}`;
+  const key2 = `${t2}||${t1}`;
+  const h2h = DATA.h2h?.[key1] || DATA.h2h?.[key2];
+  if (h2h) {
+    const t1w = h2h.team1 === t1 ? h2h.team1_wins : h2h.team2_wins;
+    const t2w = h2h.team1 === t1 ? h2h.team2_wins : h2h.team1_wins;
+    document.getElementById("h2h-summary").textContent =
+      `Head-to-Head: ${t1} ${t1w}–${t2w} ${t2} in ${h2h.matches} meetings`;
+  }
+
+  result.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
+function renderRecentMatches() {
+  const tbody = document.getElementById("recent-tbody");
+  if (!tbody) return;
+  const recent = allMatches.slice(0, 10);
+  tbody.innerHTML = recent.map(m => {
+    const t1m = getTeamMeta(m.team1);
+    const t2m = getTeamMeta(m.team2);
+    return `
+      <tr onclick="window.location='match.html?id=${m.match_id}'" style="cursor:pointer">
+        <td style="color:var(--text-muted);font-size:0.8rem">${formatDate(m.date)}</td>
+        <td>
+          <span class="team-cell">
+            <img src="${t1m.logo}" width="20" height="20" style="object-fit:contain;border-radius:3px" onerror="this.style.display='none'" alt="${m.team1}">
+            <strong>${m.team1}</strong>
+          </span>
+          <span style="color:var(--text-muted);margin:0 0.3rem">vs</span>
+          <span class="team-cell">
+            <img src="${t2m.logo}" width="20" height="20" style="object-fit:contain;border-radius:3px" onerror="this.style.display='none'" alt="${m.team2}">
+            <strong>${m.team2}</strong>
+          </span>
+        </td>
+        <td style="font-size:0.8rem">
+          <span style="color:${t1m.color}">${m.team1_score}/${m.team1_wickets}</span>
+          &nbsp;vs&nbsp;
+          <span style="color:${t2m.color}">${m.team2_score}/${m.team2_wickets}</span>
+        </td>
+        <td><span style="color:var(--accent-green);font-weight:700">${m.winner}</span></td>
+        <td style="color:var(--text-muted);font-size:0.8rem">${m.city || m.venue.split(",")[0]}</td>
+      </tr>`;
+  }).join("");
+}
+</script>
+</body>
+</html>

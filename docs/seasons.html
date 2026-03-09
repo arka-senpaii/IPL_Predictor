@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seasons — IPL Predictor</title>
+  <meta name="description" content="IPL season history: champions, runners-up, Orange Cap and Purple Cap winners by year.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/logos/ipl.png">
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="nav-brand"><span class="trophy">🏏</span> IPL Predictor</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="matches.html">Matches</a></li>
+    <li><a href="teams.html">Teams</a></li>
+    <li><a href="seasons.html">Seasons</a></li>
+    <li><a href="venues.html">Grounds</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="container" style="padding-top:2.5rem">
+    <div class="section-header">
+      <h2>IPL <span>Season History</span></h2>
+    </div>
+
+    <!-- Champions Bar Chart -->
+    <div class="card" style="margin-bottom:2.5rem">
+      <div class="card-title">🏆 All-Time Title Count</div>
+      <canvas id="chart-champions" height="280"></canvas>
+    </div>
+
+    <!-- Season Cards grid -->
+    <div class="seasons-grid" id="seasons-grid">
+      <div class="spinner"></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>IPL Predictor &middot; Data: IPL 2008–2024 &middot; <a href="index.html">Home</a></p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/charts.js"></script>
+<script>
+(async () => {
+  await loadAllData();
+
+  // Seasons grid
+  const grid = document.getElementById("seasons-grid");
+  const seasons = Object.entries(DATA.seasons || {}).sort((a, b) => b[0].localeCompare(a[0]));
+
+  grid.innerHTML = seasons.map(([season, s]) => {
+    const champMeta = getTeamMeta(s.champion || "");
+    const runnerMeta = getTeamMeta(s.runner_up || "");
+    return `
+      <div class="season-card">
+        <div class="season-title">${season}</div>
+        <div class="champion">
+          <img src="${champMeta.logo}" onerror="this.style.display='none'" alt="${s.champion}">
+          <div>
+            <div class="name">${s.champion || "—"}</div>
+            <div style="font-size:0.75rem;color:var(--text-muted)">🏆 Champion</div>
+          </div>
+        </div>
+        ${s.runner_up ? `
+        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem">
+          <img src="${runnerMeta.logo}" width="24" height="24" style="object-fit:contain" onerror="this.style.display='none'" alt="${s.runner_up}">
+          <span style="font-size:0.82rem;color:var(--text-secondary)">${s.runner_up}</span>
+          <span style="font-size:0.72rem;color:var(--text-muted)">Runner-up</span>
+        </div>` : ""}
+        <div style="font-size:0.8rem;border-top:1px solid var(--border);padding-top:0.65rem;margin-top:0.25rem;display:grid;grid-template-columns:1fr 1fr;gap:0.4rem">
+          ${s.orange_cap ? `<div><span style="color:orange;font-size:0.9rem">🟠</span> <span style="color:var(--text-secondary)">${s.orange_cap}</span><br><span style="color:var(--text-muted);font-size:0.72rem">${s.orange_cap_runs} runs</span></div>` : ""}
+          ${s.purple_cap ? `<div><span style="color:#7c5cbf;font-size:0.9rem">🟣</span> <span style="color:var(--text-secondary)">${s.purple_cap}</span><br><span style="color:var(--text-muted);font-size:0.72rem">${s.purple_cap_wickets} wkts</span></div>` : ""}
+        </div>
+        <div style="font-size:0.75rem;color:var(--text-muted);margin-top:0.4rem">${s.matches} matches played</div>
+      </div>`;
+  }).join("");
+
+  // Champions chart
+  requestAnimationFrame(() => renderChampionsBar(DATA.seasons || {}, "chart-champions"));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matches — IPL Predictor</title>
+  <meta name="description" content="Browse all IPL match results with full stats. Filter by team, season, venue, and click any match for detailed analysis and charts.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/logos/ipl.png">
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="nav-brand"><span class="trophy">🏏</span> IPL Predictor</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="matches.html">Matches</a></li>
+    <li><a href="teams.html">Teams</a></li>
+    <li><a href="seasons.html">Seasons</a></li>
+    <li><a href="venues.html">Grounds</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="container" style="padding-top:2.5rem" id="matches-table-section">
+
+    <div class="section-header">
+      <div>
+        <h2>All <span>Matches</span></h2>
+        <div style="font-size:0.85rem;color:var(--text-muted);margin-top:0.25rem">
+          <span id="match-count">Loading…</span> — click any row for full analysis
+        </div>
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="search-bar">
+      <input type="text" class="search-input" id="match-search" placeholder="🔍 Search team, venue, player…">
+      <select class="form-select" id="filter-season" style="max-width:150px">
+        <option value="">All Seasons</option>
+      </select>
+      <select class="form-select" id="filter-team" style="max-width:200px">
+        <option value="">All Teams</option>
+      </select>
+      <select class="form-select" id="filter-venue" style="max-width:200px">
+        <option value="">All Venues</option>
+      </select>
+    </div>
+
+    <div class="card" style="padding:0">
+      <div class="matches-table-wrapper" style="border:none">
+        <table class="matches-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Season</th>
+              <th>Teams</th>
+              <th>Scores</th>
+              <th>Result</th>
+              <th>Venue</th>
+              <th>Stage</th>
+            </tr>
+          </thead>
+          <tbody id="matches-tbody">
+            <tr><td colspan="7" class="spinner" style="height:200px"></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="pagination" id="pagination"></div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>IPL Predictor &middot; Data: IPL 2008–2024 &middot; <a href="index.html">Home</a></p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/matches.js"></script>
+<script>initMatchesPage();</script>
+</body>
+</html>

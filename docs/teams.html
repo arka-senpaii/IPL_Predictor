@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teams — IPL Predictor</title>
+  <meta name="description" content="All IPL teams with win rates, top batsmen, bowlers, and season-by-season performance.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/logos/ipl.png">
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="nav-brand"><span class="trophy">🏏</span> IPL Predictor</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="matches.html">Matches</a></li>
+    <li><a href="teams.html">Teams</a></li>
+    <li><a href="seasons.html">Seasons</a></li>
+    <li><a href="venues.html">Grounds</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="container" style="padding-top:2.5rem">
+    <div class="section-header">
+      <h2>IPL <span>Teams</span></h2>
+    </div>
+
+    <!-- Teams grid -->
+    <div class="teams-grid" id="teams-grid">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Team Detail Modal (inline) -->
+    <div id="team-detail" style="display:none;margin-top:2.5rem">
+      <div class="card" id="team-detail-card">
+        <button onclick="closeTeamDetail()" class="btn btn-outline" style="margin-bottom:1.25rem;font-size:0.85rem">✕ Close</button>
+        <div id="team-detail-content"></div>
+        <div class="charts-grid" style="margin-top:1.5rem">
+          <div class="chart-card">
+            <h3>📅 Season Performance</h3>
+            <canvas id="chart-season-perf" height="220"></canvas>
+          </div>
+          <div class="chart-card" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:center">
+            <div>
+              <h3>🏏 Win/Loss</h3>
+              <div style="position:relative;height:140px">
+                <canvas id="chart-win-rate"></canvas>
+                <div id="chart-center-label" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;pointer-events:none">
+                  <span style="font-size:1.8rem;font-weight:900;color:var(--accent-gold)" id="win-pct-center">-</span>
+                  <span style="font-size:0.7rem;color:var(--text-muted)">WIN %</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div id="h2h-select-area">
+                <label>H2H vs</label>
+                <select class="form-select" id="h2h-opponent" onchange="renderH2HForTeam()">
+                  <option value="">Select opponent</option>
+                </select>
+                <canvas id="chart-h2h-team" height="100" style="margin-top:0.75rem"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="chart-card">
+            <h3>🏏 Top Batsmen</h3>
+            <canvas id="chart-top-batsmen" height="200"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>🎳 Top Bowlers</h3>
+            <canvas id="chart-top-bowlers" height="200"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>IPL Predictor &middot; Data: IPL 2008–2024 &middot; <a href="index.html">Home</a></p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/charts.js"></script>
+<script>
+let currentTeam = null;
+
+(async () => {
+  await loadAllData();
+  renderTeamsGrid();
+})();
+
+function renderTeamsGrid() {
+  const grid = document.getElementById("teams-grid");
+  const teams = Object.entries(DATA.teams || {})
+    .sort((a, b) => b[1].win_pct - a[1].win_pct);
+
+  grid.innerHTML = teams.map(([name, data]) => {
+    const meta = getTeamMeta(name);
+    return `
+      <div class="team-card" onclick="showTeamDetail('${name.replace(/'/g, "\\'")}')">
+        <img src="${meta.logo}"
+          alt="${name}"
+          onerror="this.style.display='none'">
+        <div class="team-name">${name}</div>
+        <div class="win-pct">${data.win_pct}%</div>
+        <div class="team-record">${data.wins}W / ${data.losses}L · ${data.matches} matches</div>
+        <div class="progress-bar" style="margin-top:0.75rem">
+          <div class="progress-fill" style="width:${data.win_pct}%;background:${meta.color}"></div>
+        </div>
+      </div>`;
+  }).join("");
+}
+
+function showTeamDetail(teamName) {
+  currentTeam = teamName;
+  const data = DATA.teams[teamName];
+  if (!data) return;
+
+  const meta = getTeamMeta(teamName);
+  const detail = document.getElementById("team-detail");
+  detail.style.display = "block";
+  detail.scrollIntoView({ behavior: "smooth" });
+
+  document.getElementById("team-detail-content").innerHTML = `
+    <div style="display:flex;align-items:center;gap:1.25rem;margin-bottom:1.5rem">
+      <img src="${meta.logo}" width="72" height="72"
+        style="object-fit:contain;filter:drop-shadow(0 4px 16px rgba(0,0,0,0.5))"
+        onerror="this.style.display='none'"
+        alt="${teamName}">
+      <div>
+        <h2 style="font-size:1.6rem;font-weight:900">${teamName}</h2>
+        <div style="color:var(--text-muted);font-size:0.9rem">${data.matches} matches · ${data.wins} wins · ${data.win_pct}% win rate</div>
+      </div>
+    </div>`;
+
+  // H2H opponents
+  const oppSel = document.getElementById("h2h-opponent");
+  oppSel.innerHTML = '<option value="">Select opponent</option>';
+  Object.keys(DATA.teams).filter(t => t !== teamName).sort().forEach(t => {
+    const o = document.createElement("option"); o.value = t; o.textContent = t; oppSel.appendChild(o);
+  });
+
+  document.getElementById("win-pct-center").textContent = data.win_pct + "%";
+
+  requestAnimationFrame(() => {
+    renderSeasonPerf(data, "chart-season-perf", meta.color);
+    renderTeamWinRate(teamName, data, "chart-win-rate");
+    renderTopBatsmen(data.top_batsmen || [], "chart-top-batsmen", meta.color);
+    renderTopBowlers(data.top_bowlers || [], "chart-top-bowlers", meta.color);
+  });
+}
+
+function renderH2HForTeam() {
+  const opp = document.getElementById("h2h-opponent").value;
+  if (!opp || !currentTeam) return;
+
+  const key1 = `${currentTeam}||${opp}`;
+  const key2 = `${opp}||${currentTeam}`;
+  const h2h = DATA.h2h?.[key1] || DATA.h2h?.[key2];
+  if (!h2h) {
+    destroyChart("chart-h2h-team");
+    return;
+  }
+
+  const t1wins = h2h.team1 === currentTeam ? h2h.team1_wins : h2h.team2_wins;
+  const t2wins = h2h.team1 === currentTeam ? h2h.team2_wins : h2h.team1_wins;
+  renderH2HChart(currentTeam, opp, t1wins, t2wins, "chart-h2h-team");
+}
+
+function closeTeamDetail() {
+  document.getElementById("team-detail").style.display = "none";
+  currentTeam = null;
+}
+</script>
+</body>
+</html>

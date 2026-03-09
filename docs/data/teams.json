@@ -1,0 +1,1421 @@
+{
+  "Chennai Super Kings": {
+    "team": "Chennai Super Kings",
+    "matches": 252,
+    "wins": 142,
+    "losses": 110,
+    "win_pct": 56.3,
+    "seasons": {
+      "2007/08": {
+        "matches": 16,
+        "wins": 9
+      },
+      "2009": {
+        "matches": 14,
+        "wins": 8
+      },
+      "2009/10": {
+        "matches": 16,
+        "wins": 9
+      },
+      "2011": {
+        "matches": 16,
+        "wins": 11
+      },
+      "2012": {
+        "matches": 18,
+        "wins": 10
+      },
+      "2013": {
+        "matches": 18,
+        "wins": 12
+      },
+      "2014": {
+        "matches": 16,
+        "wins": 10
+      },
+      "2015": {
+        "matches": 17,
+        "wins": 10
+      },
+      "2018": {
+        "matches": 16,
+        "wins": 11
+      },
+      "2019": {
+        "matches": 17,
+        "wins": 10
+      },
+      "2020/21": {
+        "matches": 14,
+        "wins": 6
+      },
+      "2021": {
+        "matches": 16,
+        "wins": 11
+      },
+      "2022": {
+        "matches": 14,
+        "wins": 4
+      },
+      "2023": {
+        "matches": 16,
+        "wins": 10
+      },
+      "2024": {
+        "matches": 14,
+        "wins": 7
+      },
+      "2025": {
+        "matches": 14,
+        "wins": 4
+      }
+    },
+    "top_batsmen": [
+      {
+        "name": "MS Dhoni",
+        "runs": 4865
+      },
+      {
+        "name": "SK Raina",
+        "runs": 4695
+      },
+      {
+        "name": "F du Plessis",
+        "runs": 2721
+      },
+      {
+        "name": "RD Gaikwad",
+        "runs": 2502
+      },
+      {
+        "name": "RA Jadeja",
+        "runs": 2198
+      }
+    ],
+    "top_bowlers": [
+      {
+        "name": "RA Jadeja",
+        "wickets": 143
+      },
+      {
+        "name": "DJ Bravo",
+        "wickets": 140
+      },
+      {
+        "name": "R Ashwin",
+        "wickets": 97
+      },
+      {
+        "name": "DL Chahar",
+        "wickets": 76
+      },
+      {
+        "name": "JA Morkel",
+        "wickets": 76
+      }
+    ]
+  },
+  "Deccan Chargers": {
+    "team": "Deccan Chargers",
+    "matches": 75,
+    "wins": 29,
+    "losses": 46,
+    "win_pct": 38.7,
+    "seasons": {
+      "2007/08": {
+        "matches": 14,
+        "wins": 2
+      },
+      "2009": {
+        "matches": 16,
+        "wins": 9
+      },
+      "2009/10": {
+        "matches": 16,
+        "wins": 8
+      },
+      "2011": {
+        "matches": 14,
+        "wins": 6
+      },
+      "2012": {
+        "matches": 15,
+        "wins": 4
+      }
+    },
+    "top_batsmen": [
+      {
+        "name": "AC Gilchrist",
+        "runs": 1220
+      },
+      {
+        "name": "RG Sharma",
+        "runs": 1170
+      },
+      {
+        "name": "S Dhawan",
+        "runs": 969
+      },
+      {
+        "name": "A Symonds",
+        "runs": 839
+      },
+      {
+        "name": "HH Gibbs",
+        "runs": 805
+      }
+    ],
+    "top_bowlers": [
+      {
+        "name": "PP Ojha",
+        "wickets": 60
+      },
+      {
+        "name": "RP Singh",
+        "wickets": 51
+      },
+      {
+        "name": "A Mishra",
+        "wickets": 32
+      },
+      {
+        "name": "DW Steyn",
+        "wickets": 32
+      },
+      {
+        "name": "RJ Harris",
+        "wickets": 20
+      }
+    ]
+  },
+  "Delhi Capitals": {
+    "team": "Delhi Capitals",
+    "matches": 267,
+    "wins": 118,
+    "losses": 149,
+    "win_pct": 44.2,
+    "seasons": {
+      "2007/08": {
+        "matches": 14,
+        "wins": 7
+      },
+      "2009": {
+        "matches": 15,
+        "wins": 10
+      },
+      "2009/10": {
+        "matches": 14,
+        "wins": 7
+      },
+      "2011": {
+        "matches": 14,
+        "wins": 4
+      },
+      "2012": {
+        "matches": 18,
+        "wins": 11
+      },
+      "2013": {
+        "matches": 16,
+        "wins": 3
+      },
+      "2014": {
+        "matches": 14,
+        "wins": 2
+      },
+      "2015": {
+        "matches": 14,
+        "wins": 5
+      },
+      "2016": {
+        "matches": 14,
+        "wins": 7
+      },
+      "2017": {
+        "matches": 14,
+        "wins": 6
+      },
+      "2018": {
+        "matches": 14,
+        "wins": 5
+      },
+      "2019": {
+        "matches": 16,
+        "wins": 9
+      },
+      "2020/21": {
+        "matches": 17,
+        "wins": 8
+      },
+      "2021": {
+        "matches": 16,
+        "wins": 9
+      },
+      "2022": {
+        "matches": 14,
+        "wins": 7
+      },
+      "2023": {
+        "matches": 14,
+        "wins": 5
+      },
+      "2024": {
+        "matches": 14,
+        "wins": 7
+      },
+      "2025": {
+        "matches": 15,
+        "wins": 6
+      }
+    },
+    "top_batsmen": [
+      {
+        "name": "RR Pant",
+        "runs": 3297
+      },
+      {
+        "name": "DA Warner",
+        "runs": 2551
+      },
+      {
+        "name": "SS Iyer",
+        "runs": 2379
+      },
+      {
+        "name": "V Sehwag",
+        "runs": 2174
+      },
+      {
+        "name": "S Dhawan",
+        "runs": 2066
+      }
+    ],
+    "top_bowlers": [
+      {
+        "name": "A Mishra",
+        "wickets": 106
+      },
+      {
+        "name": "K Rabada",
+        "wickets": 79
+      },
+      {
+        "name": "AR Patel",
+        "wickets": 67
+      },
+      {
+        "name": "Kuldeep Yadav",
+        "wickets": 62
+      },
+      {
+        "name": "A Nortje",
+        "wickets": 60
+      }
+    ]
+  },
+  "Gujarat Lions": {
+    "team": "Gujarat Lions",
+    "matches": 30,
+    "wins": 13,
+    "losses": 17,
+    "win_pct": 43.3,
+    "seasons": {
+      "2016": {
+        "matches": 16,
+        "wins": 9
+      },
+      "2017": {
+        "matches": 14,
+        "wins": 4
+      }
+    },
+    "top_batsmen": [
+      {
+        "name": "SK Raina",
+        "runs": 841
+      },
+      {
+        "name": "KD Karthik",
+        "runs": 696
+      },
+      {
+        "name": "AJ Finch",
+        "runs": 693
+      },
+      {
+        "name": "BB McCullum",
+        "runs": 674
+      },
+      {
+        "name": "DR Smith",
+        "runs": 563
+      }
+    ],
+    "top_bowlers": [
+      {
+        "name": "DS Kulkarni",
+        "wickets": 21
+      },
+      {
+        "name": "DJ Bravo",
+        "wickets": 17
+      },
+      {
+        "name": "P Kumar",
+        "wickets": 15
+      },
+      {
+        "name": "RA Jadeja",
+        "wickets": 13
+      },
+      {
+        "name": "AJ Tye",
+        "wickets": 12
+      }
+    ]
+  },
+  "Gujarat Titans": {
+    "team": "Gujarat Titans",
+    "matches": 60,
+    "wins": 37,
+    "losses": 23,
+    "win_pct": 61.7,
+    "seasons": {
+      "2022": {
+        "matches": 16,
+        "wins": 12
+      },
+      "2023": {
+        "matches": 17,
+        "wins": 11
+      },
+      "2024": {
+        "matches": 12,
+        "wins": 5
+      },
+      "2025": {
+        "matches": 15,
+        "wins": 9
+      }
+    },
+    "top_batsmen": [
+      {
+        "name": "Shubman Gill",
+        "runs": 2449
+      },
+      {
+        "name": "B Sai Sudharsan",
+        "runs": 1793
+      },
+      {
+        "name": "DA Miller",
+        "runs": 950
+      },
+      {
+        "name": "HH Pandya",
+        "runs": 833
+      },
+      {
+        "name": "WP Saha",
+        "runs": 824
+      }
+    ],
+    "top_bowlers": [
+      {
+        "name": "Rashid Khan",
+        "wickets": 65
+      },
+      {
+        "name": "Mohammed Shami",
+        "wickets": 48
+      },
+      {
+        "name": "MM Sharma",
+        "wickets": 40
+      },
+      {
+        "name": "R Sai Kishore",
+        "wickets": 32
+      },
+      {
+        "name": "M Prasidh Krishna",
+        "wickets": 25
+      }
+    ]
+  },
+  "Kochi Tuskers Kerala": {
+    "team": "Kochi Tuskers Kerala",
+    "matches": 14,
+    "wins": 6,
+    "losses": 8,
+    "win_pct": 42.9,
+    "seasons": {
+      "2011": {
+        "matches": 14,
+        "wins": 6
+      }
+    },
+    "top_batsmen": [
+      {
+        "name": "BB McCullum",
+        "runs": 357
+      },
+      {
+        "name": "DPMD Jayawardene",
+        "runs": 299
+      },
+      {
+        "name": "BJ Hodge",
+        "runs": 285
+      },
+      {
+        "name": "RA Jadeja",
+        "runs": 283
+      },
+      {
+        "name": "PA Patel",
+        "runs": 202
+      }
+    ],
+    "top_bowlers": [
+      {
+        "name": "RP Singh",
+        "wickets": 13
+      },
+      {
+        "name": "R Vinay Kumar",
+        "wickets": 12
+      },
+      {
+        "name": "RA Jadeja",
+        "wickets": 8
+      },
+      {
+        "name": "S Sreesanth",
+        "wickets": 7
+      },
+      {
+        "name": "BJ Hodge",
+        "wickets": 7
+      }
+    ]
+  },
+  "Kolkata Knight Riders": {
+    "team": "Kolkata Knight Riders",
+    "matches": 264,
+    "wins": 135,
+    "losses": 129,
+    "win_pct": 51.1,
+    "seasons": {
+      "2007/08": {
+        "matches": 13,
+        "wins": 6
+      },
+      "2009": {
+        "matches": 13,
+        "wins": 3
+      },
+      "2009/10": {
+        "matches": 14,
+        "wins": 7
+      },
+      "2011": {
+        "matches": 15,
+        "wins": 8
+      },
+      "2012": {
+        "matches": 17,
+        "wins": 12
+      },
+      "2013": {
+        "matches": 16,
+        "wins": 6
+      },
+      "2014": {
+        "matches": 16,
+        "wins": 11
+      },
+      "2015": {
+        "matches": 13,
+        "wins": 7
+      },
+      "2016": {
+        "matches": 15,
+        "wins": 8
+      },
+      "2017": {
+        "matches": 16,
+        "wins": 9
+      },
+      "2018": {
+        "matches": 16,
+        "wins": 9
+      },
+      "2019": {
+        "matches": 14,
+        "wins": 6
+      },
+      "2020/21": {
+        "matches": 14,
+        "wins": 6
+      },
+      "2021": {
+        "matches": 17,
+        "wins": 9
+      },
+      "2022": {
+        "matches": 14,
+        "wins": 6
+      },
+      "2023": {
+        "matches": 14,
+        "wins": 6
+      },
+      "2024": {
+        "matches": 14,
+        "wins": 11
+      },
+      "2025": {
+        "matches": 13,
+        "wins": 5
+      }
+    },
+    "top_batsmen": [
+      {
+        "name": "G Gambhir",
+        "runs": 3035
+      },
+      {
+        "name": "AD Russell",
+        "runs": 2597
+      },
+      {
+        "name": "RV Uthappa",
+        "runs": 2441
+      },
+      {
+        "name": "N Rana",
+        "runs": 2199
+      },
+      {
+        "name": "YK Pathan",
+        "runs": 1893
+      }
+    ],
+    "top_bowlers": [
+      {
+        "name": "SP Narine",
+        "wickets": 192
+      },
+      {
+        "name": "AD Russell",
+        "wickets": 122
+      },
+      {
+        "name": "CV Varun",
+        "wickets": 99
+      },
+      {
+        "name": "PP Chawla",
+        "wickets": 66
+      },
+      {
+        "name": "UT Yadav",
+        "wickets": 65
+      }
+    ]
+  },
+  "Lucknow Super Giants": {
+    "team": "Lucknow Super Giants",
+    "matches": 58,
+    "wins": 30,
+    "losses": 28,
+    "win_pct": 51.7,
+    "seasons": {
+      "2022": {
+        "matches": 15,
+        "wins": 9
+      },
+      "2023": {
+        "matches": 15,
+        "wins": 8
+      },
+      "2024": {
+        "matches": 14,
+        "wins": 7
+      },
+      "2025": {
+        "matches": 14,
+        "wins": 6
+      }
+    },
+    "top_batsmen": [
+      {
+        "name": "KL Rahul",
+        "runs": 1410
+      },
+      {
+        "name": "N Pooran",
+        "runs": 1381
+      },
+      {
+        "name": "A Badoni",
+        "runs": 963
+      },
+      {
+        "name": "MP Stoinis",
+        "runs": 952
+      },
+      {
+        "name": "Q de Kock",
+        "runs": 901
+      }
+    ],
+    "top_bowlers": [
+      {
+        "name": "Ravi Bishnoi",
+        "wickets": 48
+      },
+      {
+        "name": "Avesh Khan",
+        "wickets": 40
+      },
+      {
+        "name": "Mohsin Khan",
+        "wickets": 27
+      },
+      {
+        "name": "KH Pandya",
+        "wickets": 25
+      },
+      {
+        "name": "Naveen-ul-Haq",
+        "wickets": 25
+      }
+    ]
+  },
+  "Mumbai Indians": {
+    "team": "Mumbai Indians",
+    "matches": 277,
+    "wins": 151,
+    "losses": 126,
+    "win_pct": 54.5,
+    "seasons": {
+      "2007/08": {
+        "matches": 14,
+        "wins": 7
+      },
+      "2009": {
+        "matches": 13,
+        "wins": 5
+      },
+      "2009/10": {
+        "matches": 16,
+        "wins": 11
+      },
+      "2011": {
+        "matches": 16,
+        "wins": 10
+      },
+      "2012": {
+        "matches": 17,
+        "wins": 10
+      },
+      "2013": {
+        "matches": 19,
+        "wins": 13
+      },
+      "2014": {
+        "matches": 15,
+        "wins": 7
+      },
+      "2015": {
+        "matches": 16,
+        "wins": 10
+      },
+      "2016": {
+        "matches": 14,
+        "wins": 7
+      },
+      "2017": {
+        "matches": 17,
+        "wins": 11
+      },
+      "2018": {
+        "matches": 14,
+        "wins": 6
+      },
+      "2019": {
+        "matches": 16,
+        "wins": 10
+      },
+      "2020/21": {
+        "matches": 16,
+        "wins": 11
+      },
+      "2021": {
+        "matches": 14,
+        "wins": 7
+      },
+      "2022": {
+        "matches": 14,
+        "wins": 4
+      },
+      "2023": {
+        "matches": 16,
+        "wins": 9
+      },
+      "2024": {
+        "matches": 14,
+        "wins": 4
+      },
+      "2025": {
+        "matches": 16,
+        "wins": 9
+      }
+    },
+    "top_batsmen": [
+      {
+        "name": "RG Sharma",
+        "runs": 5878
+      },
+      {
+        "name": "SA Yadav",
+        "runs": 3703
+      },
+      {
+        "name": "KA Pollard",
+        "runs": 3437
+      },
+      {
+        "name": "AT Rayudu",
+        "runs": 2416
+      },
+      {
+        "name": "SR Tendulkar",
+        "runs": 2334
+      }
+    ],
+    "top_bowlers": [
+      {
+        "name": "JJ Bumrah",
+        "wickets": 186
+      },
+      {
+        "name": "SL Malinga",
+        "wickets": 170
+      },
+      {
+        "name": "Harbhajan Singh",
+        "wickets": 127
+      },
+      {
+        "name": "MJ McClenaghan",
+        "wickets": 71
+      },
+      {
+        "name": "KA Pollard",
+        "wickets": 69
+      }
+    ]
+  },
+  "Pune Warriors": {
+    "team": "Pune Warriors",
+    "matches": 46,
+    "wins": 12,
+    "losses": 34,
+    "win_pct": 26.1,
+    "seasons": {
+      "2011": {
+        "matches": 14,
+        "wins": 4
+      },
+      "2012": {
+        "matches": 16,
+        "wins": 4
+      },
+      "2013": {
+        "matches": 16,
+        "wins": 4
+      }
+    },
+    "top_batsmen": [
+      {
+        "name": "RV Uthappa",
+        "runs": 1103
+      },
+      {
+        "name": "Yuvraj Singh",
+        "runs": 581
+      },
+      {
+        "name": "JD Ryder",
+        "runs": 548
+      },
+      {
+        "name": "MK Pandey",
+        "runs": 525
+      },
+      {
+        "name": "SPD Smith",
+        "runs": 521
+      }
+    ],
+    "top_bowlers": [
+      {
+        "name": "R Sharma",
+        "wickets": 34
+      },
+      {
+        "name": "AB Dinda",
+        "wickets": 25
+      },
+      {
+        "name": "B Kumar",
+        "wickets": 24
+      },
+      {
+        "name": "WD Parnell",
+        "wickets": 20
+      },
+      {
+        "name": "Yuvraj Singh",
+        "wickets": 15
+      }
+    ]
+  },
+  "Punjab Kings": {
+    "team": "Punjab Kings",
+    "matches": 264,
+    "wins": 119,
+    "losses": 145,
+    "win_pct": 45.1,
+    "seasons": {
+      "2007/08": {
+        "matches": 15,
+        "wins": 10
+      },
+      "2009": {
+        "matches": 14,
+        "wins": 7
+      },
+      "2009/10": {
+        "matches": 14,
+        "wins": 3
+      },
+      "2011": {
+        "matches": 14,
+        "wins": 7
+      },
+      "2012": {
+        "matches": 16,
+        "wins": 8
+      },
+      "2013": {
+        "matches": 16,
+        "wins": 8
+      },
+      "2014": {
+        "matches": 17,
+        "wins": 12
+      },
+      "2015": {
+        "matches": 14,
+        "wins": 2
+      },
+      "2016": {
+        "matches": 14,
+        "wins": 4
+      },
+      "2017": {
+        "matches": 14,
+        "wins": 7
+      },
+      "2018": {
+        "matches": 14,
+        "wins": 6
+      },
+      "2019": {
+        "matches": 14,
+        "wins": 6
+      },
+      "2020/21": {
+        "matches": 14,
+        "wins": 5
+      },
+      "2021": {
+        "matches": 14,
+        "wins": 6
+      },
+      "2022": {
+        "matches": 14,
+        "wins": 7
+      },
+      "2023": {
+        "matches": 14,
+        "wins": 6
+      },
+      "2024": {
+        "matches": 14,
+        "wins": 5
+      },
+      "2025": {
+        "matches": 18,
+        "wins": 10
+      }
+    },
+    "top_batsmen": [
+      {
+        "name": "KL Rahul",
+        "runs": 2554
+      },
+      {
+        "name": "SE Marsh",
+        "runs": 2489
+      },
+      {
+        "name": "DA Miller",
+        "runs": 1850
+      },
+      {
+        "name": "MA Agarwal",
+        "runs": 1521
+      },
+      {
+        "name": "P Simran Singh",
+        "runs": 1355
+      }
+    ],
+    "top_bowlers": [
+      {
+        "name": "Arshdeep Singh",
+        "wickets": 97
+      },
+      {
+        "name": "PP Chawla",
+        "wickets": 84
+      },
+      {
+        "name": "Sandeep Sharma",
+        "wickets": 73
+      },
+      {
+        "name": "AR Patel",
+        "wickets": 61
+      },
+      {
+        "name": "Mohammed Shami",
+        "wickets": 58
+      }
+    ]
+  },
+  "Rajasthan Royals": {
+    "team": "Rajasthan Royals",
+    "matches": 235,
+    "wins": 114,
+    "losses": 121,
+    "win_pct": 48.5,
+    "seasons": {
+      "2007/08": {
+        "matches": 16,
+        "wins": 13
+      },
+      "2009": {
+        "matches": 13,
+        "wins": 5
+      },
+      "2009/10": {
+        "matches": 14,
+        "wins": 6
+      },
+      "2011": {
+        "matches": 13,
+        "wins": 6
+      },
+      "2012": {
+        "matches": 16,
+        "wins": 7
+      },
+      "2013": {
+        "matches": 18,
+        "wins": 11
+      },
+      "2014": {
+        "matches": 14,
+        "wins": 6
+      },
+      "2015": {
+        "matches": 14,
+        "wins": 7
+      },
+      "2018": {
+        "matches": 15,
+        "wins": 7
+      },
+      "2019": {
+        "matches": 14,
+        "wins": 5
+      },
+      "2020/21": {
+        "matches": 14,
+        "wins": 6
+      },
+      "2021": {
+        "matches": 14,
+        "wins": 5
+      },
+      "2022": {
+        "matches": 17,
+        "wins": 10
+      },
+      "2023": {
+        "matches": 14,
+        "wins": 7
+      },
+      "2024": {
+        "matches": 15,
+        "wins": 9
+      },
+      "2025": {
+        "matches": 14,
+        "wins": 4
+      }
+    },
+    "top_batsmen": [
+      {
+        "name": "SV Samson",
+        "runs": 4027
+      },
+      {
+        "name": "JC Buttler",
+        "runs": 3055
+      },
+      {
+        "name": "AM Rahane",
+        "runs": 2810
+      },
+      {
+        "name": "SR Watson",
+        "runs": 2378
+      },
+      {
+        "name": "YBK Jaiswal",
+        "runs": 2166
+      }
+    ],
+    "top_bowlers": [
+      {
+        "name": "YS Chahal",
+        "wickets": 66
+      },
+      {
+        "name": "SK Trivedi",
+        "wickets": 65
+      },
+      {
+        "name": "SR Watson",
+        "wickets": 61
+      },
+      {
+        "name": "SK Warne",
+        "wickets": 57
+      },
+      {
+        "name": "JC Archer",
+        "wickets": 57
+      }
+    ]
+  },
+  "Rising Pune Supergiant": {
+    "team": "Rising Pune Supergiant",
+    "matches": 30,
+    "wins": 15,
+    "losses": 15,
+    "win_pct": 50.0,
+    "seasons": {
+      "2016": {
+        "matches": 14,
+        "wins": 5
+      },
+      "2017": {
+        "matches": 16,
+        "wins": 10
+      }
+    },
+    "top_batsmen": [
+      {
+        "name": "AM Rahane",
+        "runs": 862
+      },
+      {
+        "name": "SPD Smith",
+        "runs": 742
+      },
+      {
+        "name": "MS Dhoni",
+        "runs": 574
+      },
+      {
+        "name": "RA Tripathi",
+        "runs": 391
+      },
+      {
+        "name": "MK Tiwary",
+        "runs": 324
+      }
+    ],
+    "top_bowlers": [
+      {
+        "name": "JD Unadkat",
+        "wickets": 24
+      },
+      {
+        "name": "A Zampa",
+        "wickets": 19
+      },
+      {
+        "name": "Imran Tahir",
+        "wickets": 18
+      },
+      {
+        "name": "AB Dinda",
+        "wickets": 12
+      },
+      {
+        "name": "BA Stokes",
+        "wickets": 12
+      }
+    ]
+  },
+  "Royal Challengers Bengaluru": {
+    "team": "Royal Challengers Bengaluru",
+    "matches": 270,
+    "wins": 132,
+    "losses": 138,
+    "win_pct": 48.9,
+    "seasons": {
+      "2007/08": {
+        "matches": 14,
+        "wins": 4
+      },
+      "2009": {
+        "matches": 16,
+        "wins": 9
+      },
+      "2009/10": {
+        "matches": 16,
+        "wins": 8
+      },
+      "2011": {
+        "matches": 16,
+        "wins": 10
+      },
+      "2012": {
+        "matches": 15,
+        "wins": 8
+      },
+      "2013": {
+        "matches": 16,
+        "wins": 8
+      },
+      "2014": {
+        "matches": 14,
+        "wins": 5
+      },
+      "2015": {
+        "matches": 16,
+        "wins": 8
+      },
+      "2016": {
+        "matches": 16,
+        "wins": 9
+      },
+      "2017": {
+        "matches": 13,
+        "wins": 3
+      },
+      "2018": {
+        "matches": 14,
+        "wins": 6
+      },
+      "2019": {
+        "matches": 14,
+        "wins": 5
+      },
+      "2020/21": {
+        "matches": 15,
+        "wins": 6
+      },
+      "2021": {
+        "matches": 15,
+        "wins": 9
+      },
+      "2022": {
+        "matches": 16,
+        "wins": 9
+      },
+      "2023": {
+        "matches": 14,
+        "wins": 7
+      },
+      "2024": {
+        "matches": 15,
+        "wins": 7
+      },
+      "2025": {
+        "matches": 15,
+        "wins": 11
+      }
+    },
+    "top_batsmen": [
+      {
+        "name": "V Kohli",
+        "runs": 8671
+      },
+      {
+        "name": "AB de Villiers",
+        "runs": 4510
+      },
+      {
+        "name": "CH Gayle",
+        "runs": 3175
+      },
+      {
+        "name": "F du Plessis",
+        "runs": 1636
+      },
+      {
+        "name": "GJ Maxwell",
+        "runs": 1266
+      }
+    ],
+    "top_bowlers": [
+      {
+        "name": "YS Chahal",
+        "wickets": 139
+      },
+      {
+        "name": "HV Patel",
+        "wickets": 99
+      },
+      {
+        "name": "Mohammed Siraj",
+        "wickets": 83
+      },
+      {
+        "name": "R Vinay Kumar",
+        "wickets": 72
+      },
+      {
+        "name": "Z Khan",
+        "wickets": 49
+      }
+    ]
+  },
+  "Sunrisers Hyderabad": {
+    "team": "Sunrisers Hyderabad",
+    "matches": 196,
+    "wins": 93,
+    "losses": 103,
+    "win_pct": 47.4,
+    "seasons": {
+      "2013": {
+        "matches": 17,
+        "wins": 9
+      },
+      "2014": {
+        "matches": 14,
+        "wins": 6
+      },
+      "2015": {
+        "matches": 14,
+        "wins": 7
+      },
+      "2016": {
+        "matches": 17,
+        "wins": 11
+      },
+      "2017": {
+        "matches": 14,
+        "wins": 8
+      },
+      "2018": {
+        "matches": 17,
+        "wins": 10
+      },
+      "2019": {
+        "matches": 15,
+        "wins": 6
+      },
+      "2020/21": {
+        "matches": 16,
+        "wins": 8
+      },
+      "2021": {
+        "matches": 14,
+        "wins": 3
+      },
+      "2022": {
+        "matches": 14,
+        "wins": 6
+      },
+      "2023": {
+        "matches": 14,
+        "wins": 4
+      },
+      "2024": {
+        "matches": 16,
+        "wins": 9
+      },
+      "2025": {
+        "matches": 14,
+        "wins": 6
+      }
+    },
+    "top_batsmen": [
+      {
+        "name": "DA Warner",
+        "runs": 4016
+      },
+      {
+        "name": "S Dhawan",
+        "runs": 2518
+      },
+      {
+        "name": "KS Williamson",
+        "runs": 2105
+      },
+      {
+        "name": "Abhishek Sharma",
+        "runs": 1753
+      },
+      {
+        "name": "H Klaasen",
+        "runs": 1414
+      }
+    ],
+    "top_bowlers": [
+      {
+        "name": "B Kumar",
+        "wickets": 157
+      },
+      {
+        "name": "Rashid Khan",
+        "wickets": 93
+      },
+      {
+        "name": "T Natarajan",
+        "wickets": 65
+      },
+      {
+        "name": "S Kaul",
+        "wickets": 52
+      },
+      {
+        "name": "Sandeep Sharma",
+        "wickets": 41
+      }
+    ]
+  }
+}

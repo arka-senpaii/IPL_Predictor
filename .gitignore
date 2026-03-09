@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.pyc
+.env
+venv/
+.venv/
+env/
+*.keras
+*.h5
+ipl_model.keras
+.DS_Store
+Thumbs.db
