@@ -7,6 +7,243 @@
   <meta name="description" content="All IPL cricket grounds with stadium images, match records, and average scores.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="assets/logos/ipl.png">
+  <style>
+    /* ── Enhanced Venue Grid ── */
+    .venues-hero {
+      padding: 3rem 0 2rem;
+      text-align: center;
+    }
+    .venues-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      margin-bottom: 0.5rem;
+    }
+    .venues-hero h1 span {
+      background: linear-gradient(135deg, var(--accent-gold), #ff6b35);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .venues-hero p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+    .venues-stats-bar {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      padding: 1.25rem 2rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .vstat-item { text-align: center; }
+    .vstat-item .vnum {
+      font-size: 1.75rem;
+      font-weight: 900;
+      color: var(--accent-gold);
+      display: block;
+      line-height: 1;
+    }
+    .vstat-item .vlabel {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 0.2rem;
+    }
+    .venue-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.75rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .venue-toolbar h2 {
+      font-size: 1.3rem;
+      font-weight: 800;
+    }
+    .venue-toolbar h2 span { color: var(--accent-gold); }
+    .venue-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+    .venue-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+      cursor: pointer;
+      position: relative;
+      background: var(--bg-card);
+    }
+    .venue-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      border-color: rgba(74,158,255,0.4);
+    }
+    .venue-img-wrap {
+      position: relative;
+      height: 185px;
+      overflow: hidden;
+    }
+    .venue-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+      background: var(--bg-secondary);
+    }
+    .venue-card:hover .venue-img { transform: scale(1.06); }
+    .venue-img-placeholder {
+      width: 100%;
+      height: 185px;
+      background: linear-gradient(135deg, #141929 0%, #1a2035 50%, #0f1526 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      position: relative;
+    }
+    .venue-img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(74,158,255,0.08), transparent 70%);
+    }
+    /* Gradient overlay on image */
+    .venue-img-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 60%;
+      background: linear-gradient(to top, rgba(20,25,41,0.95) 0%, transparent 100%);
+      pointer-events: none;
+    }
+    /* City badge on image */
+    .venue-city-badge {
+      position: absolute;
+      top: 0.75rem; left: 0.75rem;
+      padding: 0.3rem 0.75rem;
+      background: rgba(10,14,26,0.75);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 100px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    /* Match count badge */
+    .venue-matches-badge {
+      position: absolute;
+      top: 0.75rem; right: 0.75rem;
+      padding: 0.3rem 0.7rem;
+      background: rgba(74,158,255, 0.2);
+      border: 1px solid rgba(74,158,255, 0.4);
+      backdrop-filter: blur(8px);
+      border-radius: 100px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--accent-blue);
+      z-index: 2;
+    }
+    .venue-info {
+      padding: 1.1rem 1.25rem 1.25rem;
+    }
+    .venue-info h3 {
+      font-size: 0.97rem;
+      font-weight: 700;
+      margin-bottom: 0.85rem;
+      line-height: 1.3;
+      color: var(--text-primary);
+    }
+    .venue-data-row {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.4rem;
+    }
+    .vd-chip {
+      flex: 1;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.45rem 0.6rem;
+      text-align: center;
+    }
+    .vd-chip .vd-val {
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: var(--accent-blue);
+      display: block;
+      line-height: 1;
+    }
+    .vd-chip .vd-lbl {
+      font-size: 0.63rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 0.15rem;
+    }
+    .venue-winner-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border);
+    }
+    .venue-winner-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      flex-shrink: 0;
+    }
+    .venue-winner-team {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .venue-winner-team img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+      border-radius: 3px;
+    }
+    .venue-winner-wins {
+      margin-left: auto;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 0.15rem 0.5rem;
+      border-radius: 100px;
+    }
+    /* No results */
+    .no-venues {
+      grid-column: 1/-1;
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--text-muted);
+    }
+    .no-venues .no-icon { font-size: 3rem; margin-bottom: 1rem; }
+    @media (max-width: 768px) {
+      .venue-grid { grid-template-columns: 1fr; }
+      .venues-stats-bar { gap: 1.5rem; }
+    }
+  </style>
 </head>
 <body>
 <nav class="navbar">
@@ -21,17 +258,38 @@
 </nav>
 
 <main>
-  <div class="container" style="padding-top:2.5rem">
-    <div class="section-header">
-      <div>
-        <h2>IPL <span>Grounds</span></h2>
-        <div style="font-size:0.85rem;color:var(--text-muted);margin-top:0.25rem">
-          <span id="venue-count">—</span> venues · click a ground to filter matches
+  <div class="container">
+
+    <div class="venues-hero">
+      <div class="hero-badge">🏟️ &nbsp;IPL Stadiums</div>
+      <h1>Cricket <span>Grounds</span></h1>
+      <p>Every stadium that has hosted the IPL — explore records, averages &amp; iconic venues.</p>
+      <div class="venues-stats-bar" id="stats-bar">
+        <div class="vstat-item">
+          <span class="vnum" id="stat-venues">—</span>
+          <div class="vlabel">Total Venues</div>
+        </div>
+        <div class="vstat-item">
+          <span class="vnum" id="stat-matches">—</span>
+          <div class="vlabel">Total Matches</div>
+        </div>
+        <div class="vstat-item">
+          <span class="vnum" id="stat-avg-inn1">—</span>
+          <div class="vlabel">Avg 1st Inn Score</div>
+        </div>
+        <div class="vstat-item">
+          <span class="vnum" id="stat-highest">—</span>
+          <div class="vlabel">Highest Avg Ground</div>
         </div>
       </div>
+    </div>
+
+    <div class="venue-toolbar">
+      <h2>All <span>Venues</span> <span id="venue-count" style="color:var(--text-muted);font-size:0.9rem;font-weight:500"></span></h2>
       <input type="text" class="search-input" id="venue-search"
         placeholder="🔍 Search venue or city…"
-        style="max-width:260px" oninput="filterVenues()">
+        style="max-width:280px;flex-shrink:0"
+        oninput="filterVenues()">
     </div>
 
     <div class="venue-grid" id="venue-grid">
@@ -42,7 +300,7 @@
 
 <footer>
   <div class="container">
-    <p>IPL Predictor &middot; Data: IPL 2008–2024 &middot; <a href="index.html">Home</a></p>
+    <p>IPL Predictor &middot; Data: IPL 2008–2024 &middot; Stadium images: Wikipedia Commons &middot; <a href="index.html">Home</a></p>
   </div>
 </footer>
 
@@ -50,40 +308,60 @@
 <script>
 let allVenues = [];
 
-// Map of venue name keywords → ground image filename
+// Wikipedia Commons venue image URLs keyed by lowercase venue-name keywords
 const GROUND_IMAGES = {
-  "chinnaswamy": "chinnaswamy.jpg",
-  "wankhede": "wankhede.jpg",
-  "eden gardens": "eden_gardens.jpg",
-  "chepauk": "chepauk.jpg",
-  "feroz shah kotla": "kotla.jpg",
-  "arun jaitley": "kotla.jpg",
-  "mohali": "mohali.jpg",
-  "punjab cricket": "mohali.jpg",
-  "rajiv gandhi": "rajiv_gandhi.jpg",
-  "hyderabad": "rajiv_gandhi.jpg",
-  "sawai mansingh": "sawai_mansingh.jpg",
-  "jaipur": "sawai_mansingh.jpg",
-  "narendra modi": "narendra_modi.jpg",
-  "ahmedabad": "narendra_modi.jpg",
-  "motera": "narendra_modi.jpg",
-  "brabourne": "brabourne.jpg",
-  "mumbai": "wankhede.jpg",
-  "lucknow": "ekana.jpg",
-  "ekana": "ekana.jpg",
-  "dharamsala": "dharamsala.jpg",
-  "himachal": "dharamsala.jpg",
-  "vizag": "vizag.jpg",
-  "visakhapatnam": "vizag.jpg",
-  "kolkata": "eden_gardens.jpg",
-  "pune": "mca.jpg",
-  "mca": "mca.jpg",
+  "wankhede":        "assets/grounds/Wankhede_Stadium.jpg",
+  "eden gardens":    "assets/grounds/Eden_Gardens.jpg",
+  "chinnaswamy":     "assets/grounds/M_Chinnaswamy_Stadium.jpg",
+  "chepauk":         "assets/grounds/MA_Chidambaram_Stadium.jpg",
+  "chidambaram":     "assets/grounds/MA_Chidambaram_Stadium.jpg",
+  "arun jaitley":    "assets/grounds/Arun_Jaitley_Stadium.jpg",
+  "feroz shah":      "assets/grounds/Arun_Jaitley_Stadium.jpg",
+  "narendra modi":   "assets/grounds/Narendra_Modi_Stadium.jpg",
+  "motera":          "assets/grounds/Narendra_Modi_Stadium.jpg",
+  "sawai mansingh":  "assets/grounds/Sawai_Mansingh_Stadium.jpg",
+  "rajiv gandhi":    "assets/grounds/Rajiv_Gandhi_International_Stadium.jpg",
+  "uppal":           "assets/grounds/Rajiv_Gandhi_International_Stadium.jpg",
+  "punjab cricket":  "assets/grounds/Punjab_Cricket_Association_IS_Bindra_Stadium.jpg",
+  "mohali":          "assets/grounds/Punjab_Cricket_Association_IS_Bindra_Stadium.jpg",
+  "mullanpur":       "assets/grounds/Maharaja_Yadavindra_Singh_International_Cricket_Stadium.jpg",
+  "himachal":        "assets/grounds/Himachal_Pradesh_Cricket_Association_Stadium.jpg",
+  "dharamsala":      "assets/grounds/Himachal_Pradesh_Cricket_Association_Stadium.jpg",
+  "brabourne":       "assets/grounds/Brabourne_Stadium.jpg",
+  "ekana":           "assets/grounds/Bharat_Ratna_Shri_Atal_Bihari_Vajpayee_Ekana_Cricket_Stadium.jpg",
+  "lucknow":         "assets/grounds/Bharat_Ratna_Shri_Atal_Bihari_Vajpayee_Ekana_Cricket_Stadium.jpg",
+  "maharashtra cricket": "assets/grounds/Maharashtra_Cricket_Association_Stadium.jpg",
+  "gahunje":         "assets/grounds/Maharashtra_Cricket_Association_Stadium.jpg",
+  "barsapara":       "assets/grounds/Barsapara_Cricket_Stadium.jpg",
+  "guwahati":        "assets/grounds/Barsapara_Cricket_Stadium.jpg",
+  "vidarbha":        "assets/grounds/Vidarbha_Cricket_Association_Stadium.jpg",
+  "nagpur":          "assets/grounds/Vidarbha_Cricket_Association_Stadium.jpg",
+  "holkar":          "assets/grounds/Holkar_Cricket_Stadium.jpg",
+  "indore":          "assets/grounds/Holkar_Cricket_Stadium.jpg",
+  "saurashtra":      "assets/grounds/Saurashtra_Cricket_Association_Stadium.jpg",
+  "rajkot":          "assets/grounds/Saurashtra_Cricket_Association_Stadium.jpg",
+  "visakhapatnam":   "assets/grounds/Dr._Y.S._Rajasekhara_Reddy_ACA-VDCA_Cricket_Stadium.jpg",
+  "vizag":           "assets/grounds/Dr._Y.S._Rajasekhara_Reddy_ACA-VDCA_Cricket_Stadium.jpg",
+  "dubai":           "assets/grounds/Dubai_International_Cricket_Stadium.jpg",
+  "sharjah":         "assets/grounds/Sharjah_Cricket_Stadium.jpg",
+  "jsca":            "assets/grounds/JSCA_International_Stadium_Complex.jpg",
+  "ranchi":          "assets/grounds/JSCA_International_Stadium_Complex.jpg",
+  "green park":      "assets/grounds/Green_Park.jpg",
+  "kanpur":          "assets/grounds/Green_Park.jpg",
+  "barabati":        "assets/grounds/Barabati_Stadium.jpg",
+  "cuttack":         "assets/grounds/Barabati_Stadium.jpg",
+  "newlands":        "assets/grounds/De_Beers_Diamond_Oval.jpg",
+  "wanderers":       "assets/grounds/New_Wanderers_Stadium.jpg",
+  "supersport":      "assets/grounds/SuperSport_Park.jpg",
+  "centurion":       "assets/grounds/SuperSport_Park.jpg",
+  "shaheed veer":    "assets/grounds/Shaheed_Veer_Narayan_Singh_International_Stadium.jpg",
+  "raipur":          "assets/grounds/Shaheed_Veer_Narayan_Singh_International_Stadium.jpg",
 };
 
 function getGroundImage(venueName) {
   const name = venueName.toLowerCase();
-  for (const [key, img] of Object.entries(GROUND_IMAGES)) {
-    if (name.includes(key)) return `assets/grounds/${img}`;
+  for (const [key, url] of Object.entries(GROUND_IMAGES)) {
+    if (name.includes(key)) return url;
   }
   return null;
 }
@@ -91,7 +369,21 @@ function getGroundImage(venueName) {
 (async () => {
   await loadAllData();
   allVenues = Object.entries(DATA.venues || {}).sort((a, b) => b[1].matches - a[1].matches);
-  document.getElementById("venue-count").textContent = allVenues.length;
+
+  // Fill stats bar
+  const totalMatches = allVenues.reduce((s, [_, v]) => s + v.matches, 0);
+  const avgInn1 = allVenues.length
+    ? (allVenues.reduce((s, [_, v]) => s + v.avg_score_inn1, 0) / allVenues.length).toFixed(0)
+    : "—";
+  const highest = allVenues.reduce((best, [name, v]) =>
+    v.avg_score_inn1 > (best?.score || 0) ? { name: name.split(",")[0].split(" ").slice(-2).join(" "), score: v.avg_score_inn1 } : best, null);
+
+  document.getElementById("stat-venues").textContent = allVenues.length;
+  document.getElementById("stat-matches").textContent = totalMatches.toLocaleString();
+  document.getElementById("stat-avg-inn1").textContent = avgInn1;
+  if (highest) document.getElementById("stat-highest").textContent = highest.score;
+
+  document.getElementById("venue-count").textContent = `(${allVenues.length})`;
   renderVenues(allVenues);
 })();
 
@@ -99,35 +391,72 @@ function filterVenues() {
   const q = document.getElementById("venue-search").value.toLowerCase();
   const filtered = allVenues.filter(([name, v]) =>
     name.toLowerCase().includes(q) || (v.city || "").toLowerCase().includes(q));
+  document.getElementById("venue-count").textContent = `(${filtered.length})`;
   renderVenues(filtered);
 }
 
 function renderVenues(venues) {
   const grid = document.getElementById("venue-grid");
+
+  if (!venues.length) {
+    grid.innerHTML = `<div class="no-venues"><div class="no-icon">🏟️</div><p>No venues found for your search.</p></div>`;
+    return;
+  }
+
   grid.innerHTML = venues.map(([name, v]) => {
-    const img = getGroundImage(name);
-    const imageEl = img
-      ? `<img class="venue-img" src="${img}" alt="${name}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=&quot;venue-img-placeholder&quot;>🏟️</div>'">`
-      : `<div class="venue-img-placeholder">🏟️</div>`;
+    const imgUrl = getGroundImage(name);
+    const teamMeta = getTeamMeta(v.most_wins || "");
+    const shortName = name.split(",")[0];
+
+    const imageEl = imgUrl
+      ? `<div class="venue-img-wrap">
+           <img class="venue-img" src="${imgUrl}" alt="${name}" loading="lazy"
+             onerror="this.parentElement.innerHTML='<div class=\\'venue-img-placeholder\\'>🏟️</div>'">
+           <div class="venue-city-badge">📍 ${v.city || "India"}</div>
+           <div class="venue-matches-badge">${v.matches} Matches</div>
+         </div>`
+      : `<div class="venue-img-wrap">
+           <div class="venue-img-placeholder">🏟️</div>
+           <div class="venue-city-badge">📍 ${v.city || "India"}</div>
+           <div class="venue-matches-badge">${v.matches} Matches</div>
+         </div>`;
+
+    const winnerHtml = v.most_wins ? `
+      <div class="venue-winner-row">
+        <span class="venue-winner-label">🏆 Dominates</span>
+        <span class="venue-winner-team">
+          <img src="${teamMeta.logo}" alt="${v.most_wins}"
+            onerror="this.style.display='none'">
+          ${v.most_wins}
+        </span>
+        <span class="venue-winner-wins">${v.most_wins_count}W</span>
+      </div>` : "";
 
     return `
-      <div class="venue-card" onclick="window.location='matches.html?venue=${encodeURIComponent(name)}'" title="View ${name} matches">
+      <div class="venue-card fade-in"
+        onclick="window.location='matches.html?venue=${encodeURIComponent(name)}'"
+        title="View matches at ${shortName}">
         ${imageEl}
         <div class="venue-info">
-          <h3>${name}</h3>
-          <p>${v.city || ""}</p>
-          <div class="venue-stat">
-            <span>${v.matches} matches</span>
-            <span class="stat-val">Avg: ${v.avg_score_inn1}/${v.avg_score_inn2}</span>
+          <h3>${shortName}</h3>
+          <div class="venue-data-row">
+            <div class="vd-chip">
+              <span class="vd-val">${v.avg_score_inn1}</span>
+              <div class="vd-lbl">Avg 1st Inn</div>
+            </div>
+            <div class="vd-chip">
+              <span class="vd-val">${v.avg_score_inn2}</span>
+              <div class="vd-lbl">Avg 2nd Inn</div>
+            </div>
+            <div class="vd-chip">
+              <span class="vd-val" style="color:var(--accent-gold)">${(v.avg_score_inn1 - v.avg_score_inn2).toFixed(0)}</span>
+              <div class="vd-lbl">Bat 1st Edge</div>
+            </div>
           </div>
-          ${v.most_wins ? `
-          <div class="venue-stat" style="margin-top:0.3rem">
-            <span style="font-size:0.75rem;color:var(--text-muted)">Most wins:</span>
-            <span class="stat-val" style="font-size:0.78rem">${v.most_wins} (${v.most_wins_count})</span>
-          </div>` : ""}
+          ${winnerHtml}
         </div>
       </div>`;
-  }).join("") || `<div style="color:var(--text-muted);padding:2rem">No venues found.</div>`;
+  }).join("");
 }
 </script>
 </body>

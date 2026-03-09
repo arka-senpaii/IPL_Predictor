@@ -63,7 +63,7 @@
       <div class="season-card">
         <div class="season-title">${season}</div>
         <div class="champion">
-          <img src="${champMeta.logo}" onerror="this.style.display='none'" alt="${s.champion}">
+          <img src="${champMeta.logo}" onerror="this.outerHTML = teamAbbrBadgeString('${champMeta.abbr}', '${champMeta.color}', 40)" alt="${s.champion}">
           <div>
             <div class="name">${s.champion || "—"}</div>
             <div style="font-size:0.75rem;color:var(--text-muted)">🏆 Champion</div>
@@ -71,7 +71,7 @@
         </div>
         ${s.runner_up ? `
         <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem">
-          <img src="${runnerMeta.logo}" width="24" height="24" style="object-fit:contain" onerror="this.style.display='none'" alt="${s.runner_up}">
+          <img src="${runnerMeta.logo}" width="24" height="24" style="object-fit:contain" onerror="this.outerHTML = teamAbbrBadgeString('${runnerMeta.abbr}', '${runnerMeta.color}', 24)" alt="${s.runner_up}">
           <span style="font-size:0.82rem;color:var(--text-secondary)">${s.runner_up}</span>
           <span style="font-size:0.72rem;color:var(--text-muted)">Runner-up</span>
         </div>` : ""}

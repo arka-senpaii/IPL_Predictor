@@ -97,7 +97,7 @@ function renderMatchesTable() {
           <span class="team-cell">
             <img src="${t1Meta.logo}" width="22" height="22" 
               style="object-fit:contain;border-radius:3px" 
-              onerror="this.style.display='none'"
+              onerror="this.outerHTML = teamAbbrBadgeString('${t1Meta.abbr}', '${t1Meta.color}', 22)"
               alt="${m.team1}">
             ${m.team1}
           </span>
@@ -105,7 +105,7 @@ function renderMatchesTable() {
           <span class="team-cell">
             <img src="${t2Meta.logo}" width="22" height="22"
               style="object-fit:contain;border-radius:3px"
-              onerror="this.style.display='none'"
+              onerror="this.outerHTML = teamAbbrBadgeString('${t2Meta.abbr}', '${t2Meta.color}', 22)"
               alt="${m.team2}">
             ${m.team2}
           </span>
@@ -119,7 +119,7 @@ function renderMatchesTable() {
           <span class="team-cell">
             <img src="${winnerMeta.logo}" width="18" height="18"
               style="object-fit:contain;border-radius:3px"
-              onerror="this.style.display='none'"
+              onerror="this.outerHTML = teamAbbrBadgeString('${winnerMeta.abbr}', '${winnerMeta.color}', 18)"
               alt="${m.winner}">
             <span style="color:var(--accent-green);font-weight:700">${m.winner}</span>
           </span>
@@ -208,7 +208,8 @@ function renderMatchDetail(m) {
               <img class="team-logo-lg" 
                 src="${t1Meta.logo}" 
                 alt="${m.team1}"
-                onerror="this.style.display='none'">
+                onerror="this.outerHTML = teamAbbrBadgeString('${t1Meta.abbr}', '${t1Meta.color}', 64)"
+                style="${!t1Meta.logo || t1Meta.logo === '' ? 'display:none' : ''}">
               <div class="sc-name">${m.team1}</div>
               <div class="sc-score">${m.team1_score}/${m.team1_wickets}</div>
               <div class="sc-detail">${calcOvers(m.team1_wickets)} overs</div>
@@ -222,7 +223,8 @@ function renderMatchDetail(m) {
               <img class="team-logo-lg"
                 src="${t2Meta.logo}"
                 alt="${m.team2}"
-                onerror="this.style.display='none'">
+                onerror="this.outerHTML = teamAbbrBadgeString('${t2Meta.abbr}', '${t2Meta.color}', 64)"
+                style="${!t2Meta.logo || t2Meta.logo === '' ? 'display:none' : ''}">
               <div class="sc-name">${m.team2}</div>
               <div class="sc-score">${m.team2_score}/${m.team2_wickets}</div>
               <div class="sc-detail">${calcOvers(m.team2_wickets)} overs</div>

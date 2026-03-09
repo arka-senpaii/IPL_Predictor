@@ -183,7 +183,7 @@ function updateTeamPreview(num) {
   preview.innerHTML = `
     <img src="${meta.logo}" width="44" height="44"
       style="object-fit:contain;border-radius:6px"
-      onerror="this.style.display='none'"
+      onerror="this.outerHTML = teamAbbrBadgeString('${meta.abbr}', '${meta.color}', 44)"
       alt="${teamName}">
     <div>
       <div class="team-name-display">${teamName}</div>
@@ -246,12 +246,12 @@ function renderRecentMatches() {
         <td style="color:var(--text-muted);font-size:0.8rem">${formatDate(m.date)}</td>
         <td>
           <span class="team-cell">
-            <img src="${t1m.logo}" width="20" height="20" style="object-fit:contain;border-radius:3px" onerror="this.style.display='none'" alt="${m.team1}">
+            <img src="${t1m.logo}" width="20" height="20" style="object-fit:contain;border-radius:3px" onerror="this.outerHTML = teamAbbrBadgeString('${t1m.abbr}', '${t1m.color}', 20)" alt="${m.team1}">
             <strong>${m.team1}</strong>
           </span>
           <span style="color:var(--text-muted);margin:0 0.3rem">vs</span>
           <span class="team-cell">
-            <img src="${t2m.logo}" width="20" height="20" style="object-fit:contain;border-radius:3px" onerror="this.style.display='none'" alt="${m.team2}">
+            <img src="${t2m.logo}" width="20" height="20" style="object-fit:contain;border-radius:3px" onerror="this.outerHTML = teamAbbrBadgeString('${t2m.abbr}', '${t2m.color}', 20)" alt="${m.team2}">
             <strong>${m.team2}</strong>
           </span>
         </td>
